@@ -1,0 +1,18 @@
+// variables.scss
+$laguna-themes: (
+  light: (
+    //background-color: #CB1D1D
+    background-color: #DD1D1D
+  ),
+  dark: (
+    //background-color: #003633
+    background-color: #32142d
+  )
+);
+
+$laguna-white: #F0D4C0;
+//$laguna-white: #FAEBC4;
+$laguna-grey: #EFD1C3;
+$breakpoint-overtablet: 630px;
+$breakpoint-overdesktop: 992px;
+

@@ -1,0 +1,61 @@
+@use "../abstracts/mixins" as mixins;
+.laguna__my--info{
+    padding: 6rem 0;
+    flex-direction: column;
+    gap:5rem;
+    -webkit-animation: animatedOpacity 0.4s ease-in-out 0.5s both;
+	                animation: animatedOpacity 0.4s ease-in-out 0.5s both;
+    @include mixins.respond-to(overtablet){
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+    }
+
+    @include mixins.respond-to(overtabletunderdesktop) {
+        flex-wrap: wrap;
+
+    }
+}
+
+#laguna__my--info__currentlyAndPreviously,
+.laguna__my--info__module,
+.laguna__my--info dl{
+    display: flex;
+    flex-direction: column;
+}
+
+#laguna__my--info__currentlyAndPreviously{
+    gap:5rem;
+}
+
+.laguna__my--info__module{
+    gap:2rem
+}
+
+.laguna__my--info dl{
+    gap:1rem;
+}
+
+.laguna__my--info h6{
+    font-weight: 800;
+}
+
+.laguna__my--info dl,
+.laguna__my--info a{
+    font-family: "Lexend Exa", sans-serif;
+    font-size: 1.5rem;
+    margin:0;
+    text-decoration:none;
+}
+
+.laguna__my--info{
+        
+    > .laguna__my--info__module,
+    > .laguna__my--info__col{
+        margin-bottom: 5rem;
+        @include mixins.respond-to(overtablet){
+            margin-bottom: 0;
+        }
+    }
+
+}

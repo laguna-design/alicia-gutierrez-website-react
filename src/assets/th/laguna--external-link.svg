@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 41.6 41.6">
+  <defs>
+    <style>
+      .laguna--external-link {
+        fill: none;
+        stroke: #fbe5da;
+        stroke-miterlimit: 10;
+        stroke-width: 4.3px;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+  <g>
+    <g id="Layer_1">
+      <g>
+        <path class="laguna--external-link" d="M15,26.6L40.1,1.5"/>
+        <path class="laguna--external-link" d="M39.5,22.3V2.1s-20.2,0-20.2,0"/>
+      </g>
+      <polyline class="laguna--external-link" points="39.5 31.2 39.5 39.5 2.1 39.5 2.1 2.1 10.4 2.1"/>
+    </g>
+  </g>
+</svg>

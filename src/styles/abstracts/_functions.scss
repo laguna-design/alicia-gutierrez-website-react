@@ -1,0 +1,6 @@
+@use "variables" as vars;
+@use "sass:map";
+
+@function get-theme-value($laguna-theme, $laguna--bg) {
+  @return map.get(map.get(vars.$laguna-themes, $laguna-theme), $laguna--bg);
+}

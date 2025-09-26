@@ -1,0 +1,46 @@
+@use "variables" as vars;
+
+
+@mixin respond-to($breakpoint, $pointer: null) {
+  @if $breakpoint == overtablet {
+    @media only screen and (min-width: vars.$breakpoint-overtablet) {    
+      @if $pointer == fine {
+        @media (pointer: fine) {
+          @content;
+        }
+      } @else {
+        @content;
+      }
+    }
+  } @else if $breakpoint == overdesktop {
+    @media screen and (min-width: vars.$breakpoint-overdesktop) {
+      @if $pointer == fine {
+        @media (pointer: fine) {
+          @content;
+        }
+      } @else {
+        @content;
+      }
+    }
+  } @else if $breakpoint == overtabletunderdesktop {
+    $max-width: vars.$breakpoint-overdesktop - 1px; // Calculate max-width in SASS
+    @media screen and (min-width: vars.$breakpoint-overtablet) and (max-width: $max-width) {
+      @if $pointer == fine {
+        @media (pointer: fine) {
+          @content;
+        }
+      } @else {
+        @content;
+      }
+    }
+  }
+}
+
+
+//Basic Transition
+@mixin basicTransition($property: all, $duration: .4s, $timing-function: ease-in-out) {
+  -webkit-transition: #{$property} #{$duration} #{$timing-function};
+  -moz-transition: #{$property} #{$duration} #{$timing-function};
+  -o-transition: #{$property} #{$duration} #{$timing-function};
+  transition: #{$property} #{$duration} #{$timing-function};
+}

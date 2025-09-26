@@ -1,0 +1,10 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/functions" as fn;
+
+[data-theme="light"] {
+  --laguna--theme-color: #{fn.get-theme-value(light, background-color)};
+}
+
+[data-theme="dark"] {
+  --laguna--theme-color: #{fn.get-theme-value(dark, background-color)};
+}

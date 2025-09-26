@@ -1,0 +1,157 @@
+/*animaciones*/
+@keyframes animatedBG {
+    0% {
+      transform: translate(0, 0);
+    }
+    10% {
+      transform: translate(-5%, -5%);
+    }
+    20% {
+      transform: translate(-10%, 5%);
+    }
+    30% {
+      transform: translate(5%, -10%);
+    }
+    40% {
+      transform: translate(-5%, 15%);
+    }
+    50% {
+      transform: translate(-10%, 5%);
+    }
+    60% {
+      transform: translate(15%, 0);
+    }
+    70% {
+      transform: translate(0, 10%);
+    }
+    80% {
+      transform: translate(-15%, 0);
+    }
+    90% {
+      transform: translate(10%, 5%);
+    }
+    to {
+      transform: translate(5%, 0);
+    }
+}
+
+@keyframes arrowdown {
+    0% {
+      transform: translate(0, 0);
+      transform: opacity(1);
+    }
+
+    35% {
+        transform: translate(0, 0);
+        transform: opacity(1);
+      }
+
+    55%{
+        transform: translate(0px, 200px);
+        transform: opacity(0);
+    }
+
+    56%{
+        transform: translate(-200px, 200px);
+        transform: opacity(0);
+    }
+
+    57%{
+        transform: translate(-200px, -200px);
+        transform: opacity(0);
+    }
+
+    58%{
+        transform: translate(0px, -200px);
+        transform: opacity(0);
+    }
+
+    78% {
+        transform: translate(0, 0);
+        transform: opacity(1);
+      }
+    
+    to {
+      transform: translate(0, 0);
+      transform: opacity(1);
+    }
+}
+
+@keyframes arrowback {
+    0% {
+      transform: translate(0, 0);
+      transform: opacity(1);
+    }
+
+    25% {
+        transform: translate(0, 0);
+        transform: opacity(1);
+      }
+
+    47%{
+        transform: translate(-200%, 0);
+        transform: opacity(0);
+    }
+
+    48%{
+        transform: translate(-200%, -200%);
+        transform: opacity(0);
+    }
+
+    49%{
+        transform: translate(0%, -200%);
+        transform: opacity(0);
+    }
+
+    50%{
+        transform: translate(200%, 0%);
+        transform: opacity(0);
+    }
+
+    75% {
+        transform: translate(0, 0);
+        transform: opacity(1);
+      }
+    
+    to {
+      transform: translate(0, 0);
+      transform: opacity(1);
+    }
+}
+
+
+/*Moon movement*/
+
+@-webkit-keyframes moonmovement {
+  0% {
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes moonmovement {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes animatedOpacity{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}

@@ -1,0 +1,20 @@
+/*Footer*/
+@use "../abstracts/mixins" as mixins;
+footer.laguna__footer{
+    -webkit-animation: animatedOpacity 0.4s ease-in-out .25s both;
+	        animation: animatedOpacity 0.4s ease-in-out .25s both;
+    > h2{
+        text-align: center;
+        width: 100%;
+    }
+    > nav{
+        display: flex;
+        flex-direction:column;
+        gap: 3rem;
+        @include mixins.respond-to(overtablet){
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+} 

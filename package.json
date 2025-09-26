@@ -1,13 +1,15 @@
 {
   "name": "alicia-gutierrez-react",
+  "version": "2.0.0",
   "private": true,
-  "version": "0.0.0",
+  "description": "Alicia Gutierrez Portfolio built with React and Vite",
   "type": "module",
+  "main": "index.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint ."
   },
   "dependencies": {
     "react": "^19.1.1",
@@ -22,7 +24,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.4.0",
-    "sass-embedded": "^1.93.2",
+    "sass": "^1.89.2",
     "vite": "^7.1.7"
   }
 }

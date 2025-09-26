@@ -1,0 +1,78 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mixins;
+.laguna__bigTitle{
+    background-color: vars.$laguna-white;
+    @include mixins.respond-to(overtablet){
+        width: 100%;
+    }   
+    
+}
+
+.laguna__bigTitle__line{
+    background-color: vars.$laguna-white;
+    width: 100%;
+}
+
+
+
+.laguna__lines_hor,
+.laguna__lines_ver{
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.laguna__lines_hor{
+    @include mixins.respond-to(overtablet){
+        flex-direction: row;
+    }
+    .laguna__bigTitle__line{
+        &:nth-child(2){
+            height: 1.5rem;
+            @include mixins.respond-to(overtablet){
+                height: unset;
+                width: 3rem;
+            }
+        }
+        &:nth-child(3){
+            height: 1rem;
+            @include mixins.respond-to(overtablet){
+                height: unset;
+                width: 2rem;
+            }
+        }
+        &:nth-child(4){
+            height: .5rem;
+            @include mixins.respond-to(overtablet){
+                height: unset;
+                width: 1rem;
+            }
+        }
+    }
+}
+
+.laguna__lines_ver{
+    .laguna__bigTitle__line{
+        &:nth-child(2){
+            height: 1.5rem;
+        }
+        &:nth-child(3){
+            height: 1rem;
+        }
+        &:nth-child(4){
+            height: .5rem;
+        }
+    }
+}
+
+.laguna__bigTitle__svg{
+    @include mixins.respond-to(overtablet){
+        width: 50%;
+        max-width: 60rem;
+    }
+        
+    .laguna__bigTitle__svg--character {
+        fill: var(--laguna--theme-color);
+        stroke-width: 0px;
+    }
+}

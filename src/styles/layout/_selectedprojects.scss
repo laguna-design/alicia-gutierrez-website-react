@@ -1,0 +1,12 @@
+@use "../abstracts/mixins" as mixins;
+.laguna__selectedProjects{
+    margin-bottom: 6rem;
+    -webkit-animation: animatedOpacity 0.4s ease-in-out .25s both;
+	        animation: animatedOpacity 0.4s ease-in-out .25s both;
+    .laguna__bigTitle{
+        padding: 2rem;
+    }
+    @include mixins.respond-to(overtablet){
+        margin-bottom: 13rem;
+    }
+}

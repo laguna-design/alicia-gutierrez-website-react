@@ -1,0 +1,38 @@
+@use "../abstracts/variables" as vars;
+/*Scrollbar*/
+/* Style the scrollbar track (the part that the thumb moves within) */
+::-webkit-scrollbar {
+    width: 1rem; /* Width of the scrollbar */
+    height: 1rem; /* Height of the horizontal scrollbar */
+
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+    background: transparent; /* Track color */
+
+}
+
+/* Style the scrollbar thumb (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+    background: vars.$laguna-white; /* Thumb color */
+    border-radius: 3rem;
+    
+}
+
+/* Style the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: vars.$laguna-white; 
+    width: 2rem;/* Thumb color on hover */
+}
+
+
+/*-----------firefox------------*/
+/* Control the width of the scrollbar */
+/*html {
+    scrollbar-width: thin;
+}*/
+/* Control the color of the scrollbar thumb and track */
+/*html {
+    scrollbar-color: rgba($laguna-white, 0.25) rgba($laguna-white, 0.25); 
+}*/

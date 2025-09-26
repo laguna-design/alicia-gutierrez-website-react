@@ -1,0 +1,102 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mixins;
+@use "../abstracts/functions" as fn;
+
+/*General*/
+html{
+    font-size: 8px;
+}
+
+body {
+    margin:0;
+    overflow-x:hidden;
+    @include mixins.respond-to(overdesktop){
+        cursor: none;
+    }
+}
+
+*{
+    color: vars.$laguna-white; 
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+
+h1{
+    font-size: 12rem;
+}
+
+h2{
+    font-size: 5rem;
+}
+
+h3{
+    font-size: 2.75rem;
+    font-weight: 600;
+    font-family: "Lexend Exa", sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+    @include mixins.respond-to(overtablet) {
+        font-size: 3rem;
+        text-transform: none;
+    }
+}
+
+
+h6{
+    font-family: "Lexend Exa", sans-serif;
+    font-size: 1.8rem;
+    margin:0;
+}
+
+p{
+    font-size:2rem;
+    margin: 0;
+}
+
+a,
+button{
+    cursor: none;
+    
+}
+
+
+dt, dd, dd {
+    font-size: 1.5rem;
+    font-family: "Lexend Exa", sans-serif;
+}
+
+dd{
+    margin: 0;
+}
+
+button{
+    background-color: transparent;
+    border-color: vars.$laguna-white;
+    border-style: solid;
+}
+
+.laguna__main{
+    display: flex;
+    flex-direction: column;
+    padding: 0 4rem;
+    margin-bottom: 12rem;
+    margin-top: calc(4rem + 20px);
+   @include mixins.respond-to(overdesktop) {
+        padding: 0 6rem;
+    }
+}
+
+::selection{
+    color:vars.$laguna-white;
+}
+
+
+[data-theme="light"] {
+  ::selection { background-color: #{fn.get-theme-value(dark, background-color)}; }
+}
+[data-theme="dark"] {
+  ::selection { background-color: #{fn.get-theme-value(light, background-color)}; }
+}

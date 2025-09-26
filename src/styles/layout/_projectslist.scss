@@ -1,0 +1,214 @@
+  @use "../abstracts/variables" as vars;
+  @use "../abstracts/mixins" as mixins;
+  
+  ul.laguna__Projects__list {
+    margin: 0;
+    padding: 0;
+    @include mixins.basicTransition;
+
+    li{
+        @include mixins.respond-to(overtablet, fine) {
+            cursor: pointer;
+            position: relative;
+        }
+    }
+    li.laguna__Projects__single{
+        border-bottom: 1px solid;
+        list-style: none;
+        transition: padding 500ms ease-in-out;
+        @include mixins.respond-to(overtablet){
+            list-style: none;
+            &:hover{
+                background-color: vars.$laguna-white;
+                padding: 0 4rem;
+                > a{
+                    > h3{
+                       color: var(--laguna--theme-color);
+                    }
+
+                    > div.laguna__Projects__single__details{
+                        > div.laguna__Projects__single__details__text{
+                            > span.laguna__Projects__single__details__client,
+                            > span.laguna__Projects__single__details__category{
+                                color: var(--laguna--theme-color);
+                            }
+                        }
+                        
+                    }
+                } 
+            }
+        }
+
+        a{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            text-decoration: none;
+            gap: 3rem;
+            padding: 3rem 0;
+            @include mixins.respond-to(overtablet){
+                font-size: 1.75rem;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: row;
+            }
+
+            @include mixins.respond-to(overtabletunderdesktop) {
+                flex-direction: column;
+                align-items: start;
+            }
+
+            > .laguna__Projects__single__details{
+                @include mixins.respond-to(overtabletunderdesktop) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    li.laguna__Projects__external_link{
+        h3{
+            display: flex;
+            flex-direction: row;
+            gap:2rem;
+            svg{
+                width: 3rem;
+                .laguna--external-link {
+                    fill: none;
+                    stroke: vars.$laguna-white;
+                    stroke-miterlimit: 10;
+                    stroke-width: 4.3px;
+                    
+                }
+            }
+        }
+        &:hover{
+            h3{
+                svg{
+                    .laguna--external-link {
+                        stroke:var(--laguna--theme-color);
+                    }
+                }
+            }
+        }
+    }
+}
+
+ul.laguna__Projects__list li.laguna__Projects__single:hover > a ,
+ul.laguna__Projects__list li.laguna__Projects__single:hover > a > h3,
+ul.laguna__Projects__list li.laguna__Projects__single:hover > a > div.laguna__Projects__single__details > div.laguna__Projects__single__details__text > span.laguna__Projects__single__details__client,
+ul.laguna__Projects__list li.laguna__Projects__single:hover > a > div.laguna__Projects__single__details > div.laguna__Projects__single__details__text > span.laguna__Projects__single__details__category{
+    @include mixins.respond-to(overtablet, fine) {
+        color:var(--laguna--theme-color);
+    }
+}
+
+.laguna__Projects__single__details{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+    @include mixins.respond-to(overtablet){
+        width: 35%;
+        min-width: 25rem;
+        flex-direction: column;
+    }
+}
+
+.laguna__Projects__single__details .laguna__Projects__single__details__client,
+.laguna__Projects__single__details .laguna__Projects__single__details__category{
+    text-transform: uppercase;
+    font-size: 1.75rem;
+}
+
+.laguna__Projects__single__details{
+    .laguna__Projects__single__details__client{
+        font-weight: 400;
+        letter-spacing: .4rem;
+    }
+    .laguna__Projects__single__details__category{
+        font-weight: 600;
+        text-align: right;
+    }
+} 
+
+.laguna__thumbnail__hoverImage{
+    @include mixins.respond-to(overtablet, fine) {
+        position: absolute;
+        pointer-events: none;
+        display: none;
+        z-index: 1000;
+        transition: transform 0.1s;
+    }
+
+    img{
+        display: none;
+        @include mixins.respond-to(overtablet, fine) {
+            display: block;
+            max-width: 40rem;
+            margin-top:-50%; 
+        }
+    }
+}
+
+
+.laguna__projects__single--hidden {
+   display: none;
+}
+
+/*Projects-Thumbnails*/
+.laguna__projects__single__thumnbanil{
+    @include mixins.respond-to(overtablet){
+        position: absolute;
+    }
+}
+
+.laguna__projects__thumbnnail__mobile{
+    width: 100%;
+    @include mixins.respond-to(overtablet){
+        display: none;
+    }
+}
+
+.laguna__Projects__single__details__text{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @include mixins.respond-to(overtablet){
+        justify-content: space-between;
+    }
+}
+
+/*Tuhumbnail with external link*/
+/*ul.laguna__Projects__list{
+    li.laguna__Projects__single{
+        a{
+            &[href*="instagram"]{
+                h3{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    &::after{
+                        content: url('../../th/laguna__arrow_ext.svg');
+                        width: 4rem;
+                        margin-left: 1rem;
+                    }
+
+                }
+                &:hover::after {
+                    background-color: red;
+                }
+            }
+        }
+    }
+}*/
+
+/*big title in overlay*/
+.laguna__overlay {
+    > .laguna__Projects{
+        > .laguna__Projects__list{
+            padding: 1rem 4rem;
+        }
+    } 
+}

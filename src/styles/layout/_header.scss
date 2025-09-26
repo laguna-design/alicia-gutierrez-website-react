@@ -1,0 +1,105 @@
+@use "../abstracts/mixins" as mixins;
+
+/*Header*/
+header.laguna__header{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100vw;
+    
+    .laguna__header-nav{
+        background-color: var(--laguna--theme-color);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 2rem;
+        border: 2px solid;
+        border-radius: 20rem;
+        top: 4rem;
+        position: fixed;
+        z-index: 9999;
+        height: 5rem;
+    } 
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap:1rem;
+        padding: 0;
+        margin: 0;
+        &.laguna__submenu{
+            //display: none;
+            position: fixed;
+            top: 11rem;
+            flex-wrap: wrap;
+            background-color: var(--laguna--theme-color);
+            padding: 1rem 1.5rem;
+            opacity: 0;
+            pointer-events: none;
+            @include mixins.basicTransition;
+        }
+        &.laguna__submenu_show{
+            opacity: 1;
+            pointer-events: initial;
+            z-index: 9999;
+        }
+
+        li{
+            list-style: none;
+            font-size: 2rem;
+            div#contact-link{
+                > div{
+                    font-size: 2rem;
+                    @include mixins.basicTransition;
+                }
+                &:hover{
+                    > div{
+                        transform: skew(10deg, -8deg);
+                        opacity: 0.8;
+                    }
+                }
+            }
+            a{
+                @include mixins.respond-to(overtablet, fine){
+                    &:hover{
+                        div{
+                            transform: skew(10deg, -8deg);
+                            opacity: 0.8;
+                        }
+                    }
+                    > div{
+                        font-size: 2rem;
+                        @include mixins.basicTransition;
+                    }
+                }
+            }
+            a, div#contact-link{
+                text-decoration:none;
+                font-weight: 600;
+                text-transform: uppercase;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            div.laguna__selected{
+                border-bottom: 1px solid;
+            }
+        }
+    }
+}
+
+//Animation in hero zone
+body.laguna__home{
+    header.laguna__header{
+        .laguna__header-nav{
+            @include mixins.respond-to(overdesktop) {
+                -webkit-animation: animatedOpacity 0.4s ease-in-out .5s both;
+	                    animation: animatedOpacity 0.4s ease-in-out .5s both;
+            }
+        }
+    }
+}

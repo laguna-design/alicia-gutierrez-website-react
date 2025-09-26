@@ -1,0 +1,65 @@
+@use "../abstracts/mixins" as mixins;
+@use "../abstracts/variables" as vars;
+
+/* Cursor hover behavior */
+body {
+  @include mixins.respond-to(overtablet, fine) {
+    &:hover {
+      .lagunacustom-cursor {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+/* Cursor styles */
+body {
+  .lagunacustom-cursor {
+    display: none;
+
+    @include mixins.respond-to(overtablet, fine) {
+      display: initial;
+      width: 8px;
+      height: 8px;
+      border-radius: 1rem;
+      background-color: vars.$laguna-grey;
+      position: fixed;
+      top: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 500ms;
+      z-index: 99999999;
+
+      &::after {
+        content: "";
+        border-radius: 50%;
+        position: absolute;
+        top: -12px;
+        left: -12px;
+        border: 1px solid vars.$laguna-grey;
+        width: 31px;
+        height: 31px;
+        z-index: 9999999;
+      }
+
+      &.zoom {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 100%;
+        background-color: vars.$laguna-white;
+        -webkit-transition: width .4s ease-in-out;
+        -moz-transition: width .4s ease-in-out;
+        -o-transition: width .4s ease-in-out;
+        transition: width .4s ease-in-out;
+
+        &::after {
+          background-color: rgba(vars.$laguna-white, 0.25);
+          border: 0;
+          mix-blend-mode: difference;
+          transform: scale(3);
+          transition: transform 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}

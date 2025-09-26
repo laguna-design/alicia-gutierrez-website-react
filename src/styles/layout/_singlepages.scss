@@ -1,0 +1,176 @@
+@use "../abstracts/mixins" as mixins;
+/*Single pages*/
+body.laguna__singlepage{ 
+    main.laguna__main{
+        padding: 0;
+        margin-bottom: 0;
+        @include mixins.respond-to(overdesktop){
+            padding: 0 4rem;
+        }
+    }
+}
+
+.laguna__single{
+    @include mixins.respond-to(overdesktop){
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.laguna__single__clip{
+    @include mixins.respond-to(overdesktop){
+        overflow: hidden;
+        height: calc(96vh - 20px);
+        width: calc(100vw - 110px);
+    }
+}
+
+.laguna__single .laguna__single__clip_content{
+   
+    width: 100%;
+    flex-direction: column;
+    
+    @include mixins.respond-to(overdesktop){
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        overflow-x: scroll;
+        width: 100%;
+        flex-direction: row;
+        height: calc(96vh - 100px); 
+    }
+}
+
+.laguna__single{
+    .laguna__single__clip_content{
+        img{
+            //max-width: 100%;
+        } 
+    } 
+    .laguna__single__desktop{
+        display: none;
+        @include mixins.respond-to(overdesktop){
+            display: flex;
+        }
+    }
+
+    .laguna__single__mobile{
+        display: flex;
+        @include mixins.respond-to(overdesktop){
+            display: none;
+        }
+    }
+}
+
+footer.laguna__single__footer{
+    #laguna__button__info{
+        padding: 0.5rem 1.5rem;
+        letter-spacing: 0.25rem;
+        text-transform: none;
+    }
+
+    button.laguna__button__light{
+        border-radius: 0;
+        position: fixed;
+        bottom: 3rem;
+        right: 3rem;
+        
+        @include mixins.respond-to(overdesktop){
+            position: initial;
+            bottom: unset;
+            right: unset;
+        }
+    }
+    @include mixins.respond-to(overdesktop){
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+    }
+
+    > .laguna_projects_singlepage_details{
+        display: none;
+        @include mixins.respond-to(overdesktop){
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .laguna__Projects__single__details__text__header{
+            display: flex; 
+            flex-direction: column; 
+            gap: 1rem;
+            > .laguna__Projects__single__details__category{
+                text-align: left;
+            }
+        }
+
+        .laguna__Projects__single__details__text{
+            @include mixins.respond-to(overtablet){
+                gap:7rem;
+            }
+        }
+
+        .laguna__projects__single__details__prototypes{
+            > .laguna__projects__single__details__prototypes_links{
+                @include mixins.respond-to(overtablet){
+                    display: flex;
+                    flex-direction: column;
+                    gap: .5rem;
+                }
+
+                dl{
+                    @include mixins.respond-to(overtablet){
+                        display: flex;
+                        flex-direction: row;
+                        column-gap: 3rem;
+                        margin: 0;
+                        row-gap: 1rem;
+                    }
+
+                    dt{
+                        @include mixins.respond-to(overtablet){
+                            font-size: 1.75rem;
+                            font-weight: 300;
+                        }
+                    }
+
+                    dd{
+                        a{
+                            @include mixins.respond-to(overtablet){
+                                font-size: 1.75rem;
+                                display: flex;
+                                gap: .5rem;
+                                font-weight: 300;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+            @include mixins.respond-to(overtablet){
+                display: flex;
+                flex-direction: row;
+                font-size: 2rem;
+                gap: 1rem;
+            }
+        }
+    }
+
+    .laguna__footer__next-and-prev{
+        display: flex;
+        flex-direction: row;
+        > button:nth-child(2){
+            margin-left:-1px;
+        }
+
+        .laguna__button__next-prev{
+        padding: 0.6em 1em;
+        text-transform: none;
+        border: 0;
+        letter-spacing: 3px;
+        }
+
+    }
+}

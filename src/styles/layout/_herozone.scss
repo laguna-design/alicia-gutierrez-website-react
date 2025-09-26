@@ -1,0 +1,174 @@
+
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mixins;
+/*heroZone section*/
+.laguna__heroZone{
+    @include mixins.respond-to(overtablet){
+        margin-bottom: 10rem;
+    }
+    @include mixins.respond-to(overdesktop) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 96vh;
+        gap: 2rem;
+    }
+
+    #laguna--moon--full,
+    #laguna--moon--half-01,
+    #laguna--moon--half-02,
+    #laguna--moon--half-03{
+        @include mixins.basicTransition;
+    }
+
+    #laguna--moon--full{
+        @include mixins.respond-to(overdesktop) {
+            -webkit-animation: moonmovement 0.75s cubic-bezier(0.445, 0.050, 0.550, 0.950) 0.25s both;
+	                animation: moonmovement 0.75s cubic-bezier(0.445, 0.050, 0.550, 0.950) 0.25s both;
+        }
+        
+    }
+
+    #laguna--moon--half-01{
+        @include mixins.respond-to(overdesktop) {
+            -webkit-animation: moonmovement 1.25s cubic-bezier(0.445, 0.050, 0.550, 0.950) .25s both;
+	                animation: moonmovement 1.25s cubic-bezier(0.445, 0.050, 0.550, 0.950) .25s both;
+        }
+        
+    }
+
+    #laguna--moon--half-02{
+        @include mixins.respond-to(overdesktop) {
+            -webkit-animation: moonmovement 1.5s cubic-bezier(0.445, 0.050, 0.550, 0.950) .25s both;
+	                animation: moonmovement 1.5s cubic-bezier(0.445, 0.050, 0.550, 0.950) .25s both;
+        }
+    }
+
+    #laguna--moon--half-03{
+        @include mixins.respond-to(overdesktop) {
+            -webkit-animation: moonmovement 1.75s cubic-bezier(0.445, 0.050, 0.550, 0.950) .35s both;
+	                animation: moonmovement 1.75s cubic-bezier(0.445, 0.050, 0.550, 0.950) .35s both;
+        }
+        
+    }
+
+    #laguna_design--btn--default{
+        @include mixins.respond-to(overdesktop) {
+            -webkit-animation: moonmovement 1s cubic-bezier(0.445, 0.050, 0.550, 0.950) 0.5s both;
+                    animation: moonmovement 1s cubic-bezier(0.445, 0.050, 0.550, 0.950) 0.5s both;
+    }
+    }
+
+    #laguna_illustration--btn--default{
+        @include mixins.respond-to(overdesktop) {
+            -webkit-animation: moonmovement 1s cubic-bezier(0.445, 0.050, 0.550, 0.950) 1s both;
+                    animation: moonmovement 1s cubic-bezier(0.445, 0.050, 0.550, 0.950) 1s both;
+    }
+    }
+
+    .laguna__heroZone-main{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+       height: 94vh;
+        padding: 1rem 0;
+        gap: 1.5rem;
+        @include mixins.respond-to(overtablet){
+            padding: 0;
+        }
+        #laguna__heroZone__myself__mobile{
+            display: initial;
+            @include mixins.respond-to(overdesktop){
+                display: none;
+            }
+        }
+
+        #laguna--logo{
+            width: 40%;
+            @include mixins.respond-to(overdesktop) {
+                -webkit-animation: animatedOpacity 0.75s ease-in-out 1s both;
+	                    animation: animatedOpacity 0.75s ease-in-out 1s both;
+            }
+            @include mixins.respond-to(overtablet){
+                width: 16%;
+                max-width: 25rem;
+            }
+        }
+
+        .laguna__heroZone__myself{
+            @include mixins.respond-to(overdesktop) {
+                -webkit-animation: animatedOpacity 0.5s ease-in-out 1s both;
+	                    animation: animatedOpacity 0.5s ease-in-out 1s both;
+            }
+            >p{
+                font-family: "Lexend Giga", sans-serif;
+                font-size: 1.75rem;
+                line-height: 135%;
+                @include mixins.respond-to(overtablet){
+                    font-size: 2.25rem;
+                }
+                >b{
+                    font-family: "Lexend Giga", sans-serif;
+                    font-size: 1.75rem;
+                    line-height: 135%;
+                    @include mixins.respond-to(overtablet){
+                        font-size: 2.25rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.laguna__heroZone__nav-and-moon{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+    @include mixins.respond-to(overdesktop) {
+        flex-direction: row;
+        justify-content: flex-start;
+        width:100%;
+    }
+}
+
+.laguna__heroZone__myself{
+    width:100%;
+    @include mixins.respond-to(overtablet){
+        width: 66%;
+    }
+}
+
+#laguna__heroZone__myself__desktop{
+    display: none;
+    @include mixins.respond-to(overdesktop){
+        display: initial;
+    }
+}
+
+
+.laguna_design--btn--letter,
+.laguna_illustration--btn--letter,
+.laguna--logo--text-letter,
+.laguna--logo--moon-shape  {
+    fill: vars.$laguna-white;
+    stroke-width: 0px;
+}
+
+#laguna--moon--half-01{
+    height: 100%;
+}
+
+[id^="laguna--moon--"] .laguna--moon--shape{
+    fill: vars.$laguna-white;
+        fill-rule: evenodd;
+        stroke-width: 0px;
+}
+
+
+.laguna__design_and_illustration__contanier{
+    @include mixins.respond-to(overdesktop){
+        width:66.67%;
+         display: flex; 
+         gap:1rem;
+    }
+}

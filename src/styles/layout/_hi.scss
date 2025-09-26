@@ -1,0 +1,82 @@
+@use "../abstracts/mixins" as mixins;
+.laguna__overlay_BG[data-overlay="hi"]{
+    >.laguna__overlay{
+        width: 100vw;
+        max-width: 100vw; 
+        height: auto; 
+        max-height: calc(100% - 12rem);
+        bottom: 0; 
+        left: unset;
+        overflow-y: initial;
+        @include mixins.respond-to(overtablet){
+            width: 900px; 
+            left: calc(50vw - 400px); 
+            top: calc(50vh - 270px);
+            bottom: unset; 
+        }
+
+        .laguna__bigTitle{
+            align-items: center;
+            h3{
+                color: var(--laguna--theme-color);
+            }
+        }
+
+        .laguna--hi{
+            display: flex;
+            gap: 2rem;
+            flex-direction: column;
+            justify-content: center;
+            padding: 5rem 2.5rem;
+            font-size: 2rem;
+
+            .laguna--hi__img{
+                width: 18.75rem;
+                @include mixins.respond-to(overtablet){
+                    width: 30%;
+                }
+                >img{
+                    max-width: 100%;
+                }
+            }
+
+            .laguna--hi__txt{
+                width: 100%;
+                @include mixins.respond-to(overtablet){
+                    width: 60%;
+                }
+
+                >p{
+                    line-height: 2.85rem;
+                    font-size: 1.7rem;
+                    margin-bottom: 2.5rem;
+                    font-weight: 300;
+                    letter-spacing: 0.1rem;
+                }
+
+                >ul.laguna--hi__contact{
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding: 1.25rem 0;
+                    margin:0;
+                    gap: 1rem;
+                    @include mixins.respond-to(overtablet){
+                        flex-wrap: initial;
+                        gap: 2rem;
+                        padding: 0.75rem 0;
+                    }
+                    >li{
+                        list-style:none;
+                    }
+                }
+            }
+
+            @include mixins.respond-to(overtablet){
+                flex-direction: row;
+                gap: 4rem;
+            }
+
+        }
+    }
+    
+}

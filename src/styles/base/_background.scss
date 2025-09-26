@@ -1,0 +1,26 @@
+  @use "../abstracts/variables" as vars;
+//BG
+body {
+    background-color: var(--laguna--theme-color);
+}
+
+//Animated noise bg
+#laguna__animatedBG{
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-image: url(../../th/laguna--bg--noise.png);
+    animation: animatedBG 5s steps(4) infinite;
+    pointer-events: none;
+    opacity: 0.2;
+    z-index: 9999;
+}
+
+.laguna__singlepage{
+    #laguna__animatedBG{
+        z-index: -1;
+    }
+
+} 
