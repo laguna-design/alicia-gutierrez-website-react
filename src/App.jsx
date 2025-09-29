@@ -4,9 +4,12 @@ import Header from './components/Header'
 import CursorElement from './components/CursorElement'
 import Projects from './components/Projects'
 import TitleSelectedProjects from './components/titles/SelectedProjects'
-import HeroMyselfDesktop from './components/HeroZone/HeroZoneMyself'
-import HeroNavAndMoon from './components/HeroZone/HeroNavAndMoon'
-import HeroZoneMyInfo from './components/HeroZone/HeroZoneMyInfo'
+import HeroMyselfDesktop from './components/Index/HeroZone/HeroZoneMyself'
+import HeroNavAndMoon from './components/Index/HeroZone/HeroNavAndMoon'
+import HeroZoneMyInfo from './components/Index/HeroZone/HeroZoneMyInfo'
+import IndexFooter from './components/Index/IndexFooter'
+
+
 
 //JS
 import ColorThemeToggle from './js/ColorThemeToogle'
@@ -15,6 +18,7 @@ import OverlayManager from './js/OverlayManager'
 import ThumbnailGallery from './js/ThumbnailGallery'
 import ScrollEffects from './js/ScrollEffects'
 import ScrollToTopButton from './js/ScrollToTopButton'
+
 
 //Mixpanel
 import mixpanel from './utils/mixpanel';
@@ -28,6 +32,7 @@ function App() {
   return (
     <>
       <CursorElement /> 
+      
       <Header />
       <main className="laguna__main">
         <section className="laguna__heroZone">
@@ -41,8 +46,8 @@ function App() {
           <TitleSelectedProjects />
           <Projects />
         </section>
+        <IndexFooter />
       </main>
-
       <ScrollEffects />
       <ColorThemeToggle />
       <CustomCursor />
