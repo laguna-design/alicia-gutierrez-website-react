@@ -2,6 +2,8 @@
 import Header from './components/Header'
 import CursorElement from './components/CursorElement'
 import Projects from './components/Projects'
+import TitleSelectedProjects from './components/titles/SelectedProjects'
+
 
 
 //JS
@@ -11,7 +13,7 @@ import OverlayManager from './js/OverlayManager'
 import ThumbnailGallery from './js/ThumbnailGallery'
 import ScrollEffects from './js/ScrollEffects'
 import ScrollToTopButton from './js/ScrollToTopButton'
-import SeeAllToggle from './js/SeeAllToggle'
+
 
 
 
@@ -21,7 +23,12 @@ function App() {
     <>
       <CursorElement /> 
       <Header />
-      <Projects />
+      <main class="laguna__main">
+        <section id="laguna_work" className="laguna__selectedProjects">
+          <TitleSelectedProjects />
+          <Projects />
+        </section>
+      </main>
 
       <ScrollEffects />
       <ColorThemeToggle />
@@ -29,7 +36,7 @@ function App() {
       <OverlayManager />
       <ThumbnailGallery />
       <ScrollToTopButton />
-      <SeeAllToggle />
+
 
       {/* other components */}
 
