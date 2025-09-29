@@ -8,19 +8,22 @@ import CustomCursor from './js/CustomCursor'
 import OverlayManager from './js/OverlayManager'
 import ThumbnailGallery from './js/ThumbnailGallery'
 import ScrollEffects from './js/ScrollEffects'
+import ScrollToTopButton from './js/ScrollToTopButton'
 
 function App() {
 
   return (
     <>
-    <CursorElement /> 
-    <Header />
-    <ScrollEffects />
+      <CursorElement /> 
+      <Header />
 
+      <ScrollEffects />
       <ColorThemeToggle />
       <CustomCursor />
       <OverlayManager />
       <ThumbnailGallery />
+      <ScrollToTopButton />
+
       {/* other components */}
 
     </>
