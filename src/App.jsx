@@ -1,7 +1,6 @@
 //Components
-import Header from './components/header'
+import Header from './components/Header'
 import CursorElement from './components/CursorElement'
-import SelectedProjects from './components/SelectedProjects'
 
 
 //JS
@@ -21,9 +20,6 @@ function App() {
     <>
       <CursorElement /> 
       <Header />
-      <section id="laguna_work" className="laguna__selectedProjects">
-        <SelectedProjects />
-      </section>
 
       <ScrollEffects />
       <ColorThemeToggle />
