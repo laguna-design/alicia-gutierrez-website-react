@@ -2,9 +2,11 @@
 import Header from './components/header'
 import CursorElement from './components/CursorElement'
 
-
+//JS
 import ColorThemeToggle from './js/ColorThemeToogle'
 import CustomCursor from './js/CustomCursor'
+import OverlayManager from './js/OverlayManager'
+import ThumbnailGallery from './js/ThumbnailGallery'
 
 function App() {
 
@@ -15,6 +17,8 @@ function App() {
 
       <ColorThemeToggle />
       <CustomCursor />
+      <OverlayManager />
+      <ThumbnailGallery />
       {/* other components */}
 
     </>

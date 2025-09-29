@@ -16,6 +16,7 @@ body {
 body {
   .lagunacustom-cursor {
     display: none;
+    /*mix-blend-mode: difference;*/
 
     @include mixins.respond-to(overtablet, fine) {
       display: initial;
