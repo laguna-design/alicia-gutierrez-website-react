@@ -1,6 +1,7 @@
 //Components
 import Header from './components/Header'
 import CursorElement from './components/CursorElement'
+import Projects from './components/Projects'
 
 
 //JS
@@ -20,6 +21,7 @@ function App() {
     <>
       <CursorElement /> 
       <Header />
+      <Projects />
 
       <ScrollEffects />
       <ColorThemeToggle />
