@@ -1,16 +1,16 @@
-import { useState } from 'react'
-import Header from './components/header'
-import './App.css'
 
+import Header from './components/header'
+import ColorThemeToggle from './js/ColorThemeToogle'
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      
+    <> 
       <Header />
+      <ColorThemeToggle />
+      {/* other components */}
+
     </>
   )
 }

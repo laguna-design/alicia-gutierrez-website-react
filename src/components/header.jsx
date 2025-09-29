@@ -1,6 +1,3 @@
-// src/components/Header.jsx
-import React from 'react';
-//import './Header.scss'; // Assuming your styles are in SASS
 
 const Header = () => {
   return (
