@@ -3,11 +3,12 @@ import { useEffect, useState } from 'react';
 import Header from './components/Header'
 import CursorElement from './components/CursorElement'
 import Projects from './components/Projects'
-import TitleSelectedProjects from './components/titles/SelectedProjects'
+import TitleSelectedProjects from './components/titles/SelectedProjectsTitle'
 import HeroMyselfDesktop from './components/Index/HeroZone/HeroZoneMyself'
 import HeroNavAndMoon from './components/Index/HeroZone/HeroNavAndMoon'
 import HeroZoneMyInfo from './components/Index/HeroZone/HeroZoneMyInfo'
 import IndexFooter from './components/Index/IndexFooter'
+import OverlayDesign from './components/overlays/OverlayDesign'
 
 
 
@@ -47,6 +48,7 @@ function App() {
           <Projects />
         </section>
         <IndexFooter />
+        <OverlayDesign />
       </main>
       <ScrollEffects />
       <ColorThemeToggle />
