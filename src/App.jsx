@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 //Components
 import Header from './components/Header'
 import CursorElement from './components/CursorElement'
@@ -14,16 +15,20 @@ import ThumbnailGallery from './js/ThumbnailGallery'
 import ScrollEffects from './js/ScrollEffects'
 import ScrollToTopButton from './js/ScrollToTopButton'
 
-
+import mixpanel from './utils/mixpanel';
 
 
 function App() {
+  useEffect(() => {
+    mixpanel.track('App Loaded');
+  }, []);
+
 
   return (
     <>
       <CursorElement /> 
       <Header />
-      <main class="laguna__main">
+      <main className="laguna__main">
         <section id="laguna_work" className="laguna__selectedProjects">
           <TitleSelectedProjects />
           <Projects />
@@ -39,6 +44,9 @@ function App() {
 
 
       {/* other components */}
+
+     
+
 
     </>
   )

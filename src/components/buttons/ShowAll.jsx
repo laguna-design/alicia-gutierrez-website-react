@@ -1,22 +1,3 @@
-/*
-const ShowAll = () => {
-  return (
-    <article className="laguna__showAll_wrapper">
-        <button 
-        id="laguna__projects__toggleButton" 
-        className="laguna__button__light lagunahover-container"
-        >
-            Show All
-        </button>
-    </article>
-
-  );
-};
-
-export default ShowAll;*/
-
-import { useState } from 'react';
-
 const ShowAll = ({ showAll, toggleShowAll }) => {
   return (
     <article className="laguna__showAll_wrapper">

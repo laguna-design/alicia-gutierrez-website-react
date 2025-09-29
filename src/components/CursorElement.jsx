@@ -1,7 +1,7 @@
 
 const CursorElement = () => {
   return (
-    <div class="lagunacustom-cursor"></div>
+    <div className="lagunacustom-cursor"></div>
   );
 };
 
