@@ -11,7 +11,7 @@ import IndexFooter from './components/Index/IndexFooter'
 
 
 //Projects list
-import Projects from './components/Projects'
+import ProjectsList from './components/projects/ProjectsList'
 import TitleSelectedProjects from './components/titles/SelectedProjectsTitle'
 import ThumbnailHover from './components/projects/ThumbnailsHover';
 
@@ -36,6 +36,7 @@ import ScrollEffects from './js/ScrollEffects'
 import ScrollToTopButton from './js/ScrollToTopButton'
 
 
+
 //Mixpanel
 import mixpanel from './utils/mixpanel';
 
@@ -47,6 +48,8 @@ function App() {
 
   return (
     <>
+
+     
       <HeadMeta />
       <CursorElement /> 
       <AmimatedBG />
@@ -62,7 +65,7 @@ function App() {
         </section>
         <section id="laguna_work" className="laguna__selectedProjects">
           <TitleSelectedProjects />
-          <Projects />
+          <ProjectsList />
         </section>
         <IndexFooter />
         <OverlayDesign />
