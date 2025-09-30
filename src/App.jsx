@@ -72,7 +72,7 @@ function App() {
           <OverlayDesign />
           <OverlayIllustration />
           <OverlayHi />
-          <ThumbnailHover />
+          
         </main>
       )}
 
