@@ -1,89 +1,97 @@
-import { useEffect } from 'react';
+	import { useEffect } from 'react';
 
-import HeadMeta from './components/HeadMeta';
+	import { Routes, Route } from 'react-router-dom';
+	import Home from './pages/Home';
+	import ProjectPage from './pages/ProjectPage';
 
-//Components
-import Header from './components/Header'
-import HeroMyselfDesktop from './components/Index/HeroZone/HeroZoneMyself'
-import HeroNavAndMoon from './components/Index/HeroZone/HeroNavAndMoon'
-import HeroZoneMyInfo from './components/Index/HeroZone/HeroZoneMyInfo'
-import IndexFooter from './components/Index/IndexFooter'
+	import HeadMeta from './components/HeadMeta';
 
-
-//Projects list
-import ProjectsList from './components/projects/ProjectsList'
-import TitleSelectedProjects from './components/titles/SelectedProjectsTitle'
-import ThumbnailHover from './components/projects/ThumbnailsHover';
-
-//Overlays
-import OverlayDesign from './components/overlays/OverlayDesign'
-import OverlayIllustration from './components/overlays/OverlayIllustration'
-import OverlayHi from './components/overlays/OverlayHi'
-
-//Theme Elements
-import CursorElement from './components/th/CursorElement'
-import AmimatedBG from './components/th/AnimatedBG'
-
-//Buttons
-import ScrollUpBTN from './components/buttons/ScrollUp'
-
-//JS
-import ColorThemeToggle from './js/ColorThemeToogle'
-import CustomCursor from './js/CustomCursor'
-import OverlayManager from './js/OverlayManager'
-import ThumbnailGallery from './js/ThumbnailGallery'
-import ScrollEffects from './js/ScrollEffects'
-import ScrollToTopButton from './js/ScrollToTopButton'
+	//Components
+	import Header from './components/Header'
+	import HeroMyselfDesktop from './components/Index/HeroZone/HeroZoneMyself'
+	import HeroNavAndMoon from './components/Index/HeroZone/HeroNavAndMoon'
+	import HeroZoneMyInfo from './components/Index/HeroZone/HeroZoneMyInfo'
+	import IndexFooter from './components/Index/IndexFooter'
 
 
+	//Projects list
+	import ProjectsList from './components/projects/ProjectsList';
+	import TitleSelectedProjects from './components/titles/SelectedProjectsTitle'
+	import ThumbnailHover from './components/projects/ThumbnailsHover';
 
-//Mixpanel
-import mixpanel from './utils/mixpanel';
+	//Overlays
+	import OverlayDesign from './components/overlays/OverlayDesign'
+	import OverlayIllustration from './components/overlays/OverlayIllustration'
+	import OverlayHi from './components/overlays/OverlayHi'
+
+	//Theme Elements
+	import CursorElement from './components/th/CursorElement'
+	import AmimatedBG from './components/th/AnimatedBG'
+
+	//Buttons
+	import ScrollUpBTN from './components/buttons/ScrollUp'
+
+	//JS
+	import ColorThemeToggle from './js/ColorThemeToogle'
+	import CustomCursor from './js/CustomCursor'
+	import OverlayManager from './js/OverlayManager'
+	import ThumbnailGallery from './js/ThumbnailGallery'
+	import ScrollEffects from './js/ScrollEffects'
+	import ScrollToTopButton from './js/ScrollToTopButton'
 
 
-function App() {
-  useEffect(() => {
-    mixpanel.track('App Loaded');
-  }, []);
 
-  return (
-    <>
+	//Mixpanel
+	import mixpanel from './utils/mixpanel';
 
-     
-      <HeadMeta />
-      <CursorElement /> 
-      <AmimatedBG />
-      
-      <Header />
-      <main className="laguna__main">
-        <section className="laguna__heroZone">
-          <div className="laguna__heroZone-main">
-            <HeroMyselfDesktop />
-            <HeroNavAndMoon />
-            <HeroZoneMyInfo />
-          </div>
-        </section>
-        <section id="laguna_work" className="laguna__selectedProjects">
-          <TitleSelectedProjects />
-          <ProjectsList />
-        </section>
-        <IndexFooter />
-        <OverlayDesign />
-        <OverlayIllustration />
-        <OverlayHi />
-        <ThumbnailHover />
-      </main>
-      
-      <ScrollEffects />
-      <ColorThemeToggle />
-      <CustomCursor />
-      <OverlayManager />
-      <ThumbnailGallery />
-      <ScrollToTopButton />
-      <ScrollUpBTN />
-      {/* other components */}
-    </>
-  )
-}
 
-export default App
+	function App() {
+	useEffect(() => {
+		mixpanel.track('App Loaded');
+	}, []);
+
+	return (
+		<>
+		<Routes>
+		<Route path="/" element={<Home />} />
+		<Route path="/project/:slug" element={<ProjectPage />} />
+		</Routes>
+
+		
+		<HeadMeta />
+		<CursorElement /> 
+		<AmimatedBG />
+		
+		<Header />
+		<main className="laguna__main">
+			<section className="laguna__heroZone">
+			<div className="laguna__heroZone-main">
+				<HeroMyselfDesktop />
+				<HeroNavAndMoon />
+				<HeroZoneMyInfo />
+			</div>
+			</section>
+			<section id="laguna_work" className="laguna__selectedProjects">
+			<TitleSelectedProjects />
+			<ProjectsList />
+			</section>
+			<IndexFooter />
+			<OverlayDesign />
+			<OverlayIllustration />
+			<OverlayHi />
+			<ThumbnailHover />
+		</main>
+		
+		<ScrollEffects />
+		<ColorThemeToggle />
+		<CustomCursor />
+		<OverlayManager />
+		<ThumbnailGallery />
+		<ScrollToTopButton />
+		<ScrollUpBTN />
+		{/* other components */}
+		</>
+	)
+	}
+
+	export default App
