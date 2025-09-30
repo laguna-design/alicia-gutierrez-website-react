@@ -1,12 +1,18 @@
 import { useEffect } from 'react';
 //Components
 import Header from './components/Header'
-import Projects from './components/Projects'
-import TitleSelectedProjects from './components/titles/SelectedProjectsTitle'
 import HeroMyselfDesktop from './components/Index/HeroZone/HeroZoneMyself'
 import HeroNavAndMoon from './components/Index/HeroZone/HeroNavAndMoon'
 import HeroZoneMyInfo from './components/Index/HeroZone/HeroZoneMyInfo'
 import IndexFooter from './components/Index/IndexFooter'
+
+
+//Projects list
+import Projects from './components/Projects'
+import TitleSelectedProjects from './components/titles/SelectedProjectsTitle'
+import ThumbnailHover from './components/projects/ThumbnailsHover';
+
+//Overlays
 import OverlayDesign from './components/overlays/OverlayDesign'
 import OverlayIllustration from './components/overlays/OverlayIllustration'
 import OverlayHi from './components/overlays/OverlayHi'
@@ -15,7 +21,8 @@ import OverlayHi from './components/overlays/OverlayHi'
 import CursorElement from './components/th/CursorElement'
 import AmimatedBG from './components/th/AnimatedBG'
 
-
+//Buttons
+import ScrollUpBTN from './components/buttons/ScrollUp'
 
 //JS
 import ColorThemeToggle from './js/ColorThemeToogle'
@@ -57,13 +64,16 @@ function App() {
         <OverlayDesign />
         <OverlayIllustration />
         <OverlayHi />
+        <ThumbnailHover />
       </main>
+      
       <ScrollEffects />
       <ColorThemeToggle />
       <CustomCursor />
       <OverlayManager />
       <ThumbnailGallery />
       <ScrollToTopButton />
+      <ScrollUpBTN />
       {/* other components */}
     </>
   )
