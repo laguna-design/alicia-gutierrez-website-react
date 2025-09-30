@@ -180,30 +180,6 @@ ul.laguna__Projects__list li.laguna__Projects__single:hover > a > div.laguna__Pr
     }
 }
 
-/*Tuhumbnail with external link*/
-/*ul.laguna__Projects__list{
-    li.laguna__Projects__single{
-        a{
-            &[href*="instagram"]{
-                h3{
-                    display: flex;
-                    flex-direction: row;
-                    align-items: flex-start;
-                    &::after{
-                        content: url('../../th/laguna__arrow_ext.svg');
-                        width: 4rem;
-                        margin-left: 1rem;
-                    }
-
-                }
-                &:hover::after {
-                    background-color: red;
-                }
-            }
-        }
-    }
-}*/
-
 /*big title in overlay*/
 .laguna__overlay {
     > .laguna__Projects{

@@ -10,7 +10,7 @@ const DesignProjects = () => {
 
 
   return (
-    <section id="laguna_work" className="laguna__selectedProjects">
+
       <ul className="laguna__Projects__list" id="laguna__Projects__list">
         {designProjects.map((project, index) => {
           const isHidden = project.hidden && !showAll;
@@ -50,7 +50,7 @@ const DesignProjects = () => {
           );
         })}
       </ul>
-    </section>
+
   );
 };
 

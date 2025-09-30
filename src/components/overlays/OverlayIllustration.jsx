@@ -1,4 +1,4 @@
-import TitleMyIllustrationProjects from '../titles/MyIllustrationProjects'
+import TitleMyIllustrationProjects from '../titles/MyIllustrationProjectsTitle'
 import IllustrationProjects from '../projects/ProjectsIllustration';
 
 const OverlayIllustration = () => {

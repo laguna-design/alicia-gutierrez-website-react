@@ -1,6 +1,8 @@
+import TitlesLines from '../th/TitlesLines'
+
 const TitleMyIllustrationProjects = () => {
   return (
-    <div className="laguna__lines_hor">
+    <div className="laguna__lines_ver">
         <div className="laguna__bigTitle">
             <svg className="laguna__bigTitle__svg" data-name="My Illustration Projects" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1518.9 170">
                 <path className="laguna__bigTitle__svg--character" d="M0,168.1V2h35.6l5.2,51.2c.3,2.1.6,6.6.9,13.7.4,7.1.5,11.7.5,14.1h1.1c0-1.9.2-6.4.7-13.6.4-7.2.8-11.9,1.1-14.1L50.4,2h35.6v166.1h-26.3l.7-64c.3-9.1.6-15.9,1.1-20.5h-1.3c-1,9.2-1.6,14.5-1.7,15.5l-5.8,48.8h-19.3l-5.9-50.5c-.2-1.1-.4-3.5-.8-7.4-.4-3.8-.6-6-.7-6.6h-1.3c.7,5.7,1.1,12.8,1.1,21.6l.5,63.1H0Z"/>
@@ -34,9 +36,7 @@ const TitleMyIllustrationProjects = () => {
                 Close
                 </button>
         </div>
-        <div className="laguna__bigTitle__line"></div>
-        <div className="laguna__bigTitle__line"></div>
-        <div className="laguna__bigTitle__line"></div>
+        <TitlesLines />
     </div>
 
  );
