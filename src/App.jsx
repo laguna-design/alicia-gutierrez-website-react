@@ -1,4 +1,7 @@
 import { useEffect } from 'react';
+
+import HeadMeta from './components/HeadMeta';
+
 //Components
 import Header from './components/Header'
 import HeroMyselfDesktop from './components/Index/HeroZone/HeroZoneMyself'
@@ -44,6 +47,7 @@ function App() {
 
   return (
     <>
+      <HeadMeta />
       <CursorElement /> 
       <AmimatedBG />
       

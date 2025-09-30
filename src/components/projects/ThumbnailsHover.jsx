@@ -1,6 +1,6 @@
 const ThumbnailHover = () => {
     return(
-        <div class="laguna__thumbnail__hoverImage"></div>
+        <div className="laguna__thumbnail__hoverImage"></div>
     )
 };
 
