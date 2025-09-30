@@ -9,6 +9,7 @@ import HeroNavAndMoon from './components/Index/HeroZone/HeroNavAndMoon'
 import HeroZoneMyInfo from './components/Index/HeroZone/HeroZoneMyInfo'
 import IndexFooter from './components/Index/IndexFooter'
 import OverlayDesign from './components/overlays/OverlayDesign'
+import OverlayIllustration from './components/overlays/OverlayIllustration'
 
 
 
@@ -49,6 +50,7 @@ function App() {
         </section>
         <IndexFooter />
         <OverlayDesign />
+        <OverlayIllustration />
       </main>
       <ScrollEffects />
       <ColorThemeToggle />

@@ -1,27 +1,25 @@
-import { useState } from 'react';
-import ShowAll from './buttons/ShowAll';
-import projects from './data/ProjectsData';
+import projects from '../data/ProjectsData';
 
+const IllustrationProjects = () => {
 
-const SelectedProjects = () => {
-const [showAll, setShowAll] = useState(false);
+  const illustrationProjects = projects.filter(project =>
+  Array.isArray(project.section)
+    ? project.section.includes('Illustration')
+    : project.section === 'Illustration'
+);
 
-  const toggleShowAll = () => setShowAll((prev) => !prev);
 
   return (
     <section id="laguna_work" className="laguna__selectedProjects">
       <ul className="laguna__Projects__list" id="laguna__Projects__list">
-        {projects.map((project, index) => {
-          const isHidden = project.hidden && !showAll;
+        {illustrationProjects.map((project, index) => {
+          const isHidden = project.hidden;
           return (
             <li
-              key={index}
-              className={`laguna__Projects__single lagunahover-container ${
-                project.hidden ? 'laguna__projects__single--hidden' : ''
-              }`}
-              data-img={project.img}
-              section={project.section}
-              style={{ display: isHidden ? 'none' : 'list-item' }}
+                key={index}
+                className="laguna__Projects__single lagunahover-container"
+                data-img={project.img}
+                section={project.section}
             >
               <a
                 href={project.href}
@@ -49,11 +47,8 @@ const [showAll, setShowAll] = useState(false);
           );
         })}
       </ul>
-      <ShowAll showAll={showAll} toggleShowAll={toggleShowAll} />
     </section>
   );
 };
 
-export default SelectedProjects;
-
-
+export default IllustrationProjects;

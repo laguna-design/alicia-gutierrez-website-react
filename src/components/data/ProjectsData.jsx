@@ -55,7 +55,7 @@ const projects = [
         img: 'src/assets/img/projects/padilla-thumbnail.jpg',
         client: 'Freelance work',
         category: 'Ui / Ux / Branding / Illustration / Packaging',
-        section: 'Design',
+        section: ['Design', 'Illustration'],
         external: false,
         hidden: false
     },
@@ -80,16 +80,6 @@ const projects = [
         external: false,
         hidden: false
 
-    },
-    {
-        name: 'El otro lado',
-        href: 'https://www.instagram.com/laguna_illustrator/p/C12DO4LNKSs/?img_index=1',
-        img: 'src/assets/img/projects/el-otro-lado-thumbnail.jpg',
-        client: 'Personal Project',
-        category: 'Illustration',
-        section: 'Illustration',
-        external: true,
-        hidden: true
     },
     {
         name: 'El otro lado',
@@ -132,3 +122,5 @@ const projects = [
         hidden: true
     },
 ];
+
+export default projects;

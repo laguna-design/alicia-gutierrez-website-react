@@ -1,17 +1,18 @@
-import { useState } from 'react';
-import ShowAll from './buttons/ShowAll';
-import projects from './data/ProjectsData';
+import projects from '../data/ProjectsData';
 
+const DesignProjects = () => {
 
-const SelectedProjects = () => {
-const [showAll, setShowAll] = useState(false);
+  const designProjects = projects.filter(project =>
+  Array.isArray(project.section)
+    ? project.section.includes('Design')
+    : project.section === 'Design'
+);
 
-  const toggleShowAll = () => setShowAll((prev) => !prev);
 
   return (
     <section id="laguna_work" className="laguna__selectedProjects">
       <ul className="laguna__Projects__list" id="laguna__Projects__list">
-        {projects.map((project, index) => {
+        {designProjects.map((project, index) => {
           const isHidden = project.hidden && !showAll;
           return (
             <li
@@ -49,11 +50,8 @@ const [showAll, setShowAll] = useState(false);
           );
         })}
       </ul>
-      <ShowAll showAll={showAll} toggleShowAll={toggleShowAll} />
     </section>
   );
 };
 
-export default SelectedProjects;
-
-
+export default DesignProjects;
