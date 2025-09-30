@@ -1,31 +1,55 @@
-// src/pages/ProjectPage.jsx
 import { useParams } from 'react-router-dom';
 import projects from '../components/data/ProjectsData';
 
 const ProjectPage = () => {
-  const { slug } = useParams();
-  const project = projects.find(p => p.slug === slug);
+	const { slug } = useParams();
+	const project = projects.find(p => p.slug === slug);
 
-  if (!project) {
-    return <div className="laguna__project__notfound">Project not found</div>;
-  }
+	if (!project) {
+		return <div className="laguna__project__notfound">Project not found</div>;
+	}
 
-  return (
-    <section className="laguna__project__page">
-      <h1 className="laguna__project__title">{project.name}</h1>
-      <img
-        className="laguna__project__image"
-        src={project.img}
-        alt={project.name}
-      />
-      <div className="laguna__project__details">
-        <p><strong>Client:</strong> {project.client}</p>
-        <p><strong>Category:</strong> {project.category}</p>
-        <p><strong>Section:</strong> {Array.isArray(project.section) ? project.section.join(', ') : project.section}</p>
-      </div>
-      {/* You can add more fields like description, gallery, etc. */}
-    </section>
-  );
+	return (
+	<>
+		<section className="laguna__single">
+			<div className="laguna__single__clip">
+			<div className="laguna__single__clip_content laguna__single__desktop">
+				{project.imagesH.map((src, i) => (
+				<img key={i} src={src} alt={`Horizontal ${i + 1}`} />
+				))}
+			</div>
+
+			<div className="laguna__single__clip_content laguna__single__mobile">
+				{project.imagesV.map((src, i) => (
+				<img key={i} src={src} alt={`Vertical ${i + 1}`} />
+				))}
+			</div>
+
+			<footer className="laguna__single__footer">
+				<div className="laguna_projects_singlepage_details">
+					<h3>{project.name}</h3>
+					<button
+						className="laguna__button__light laguna__trigger_btn lagunahover-container"
+						id="laguna__button__info"
+						data-overlay="info"
+					>
+						+ info
+					</button>
+				</div>
+				<button
+				className="laguna__button__light laguna__trigger_btn lagunahover-container"
+				data-overlay="design"
+				>
+					Design Projects
+				</button>
+			</footer>
+			</div>
+		</section>
+	</>
+
+	);
 };
 
 export default ProjectPage;
+
+
