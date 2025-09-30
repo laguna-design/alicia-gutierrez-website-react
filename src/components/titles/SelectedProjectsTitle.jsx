@@ -1,3 +1,5 @@
+import TitlesLines from '../th/TitlesLines'
+
 const TitleSelectedProjects = () => {
   return (
     <div className="laguna__lines_hor">
@@ -21,9 +23,7 @@ const TitleSelectedProjects = () => {
             <path className="laguna__bigTitle__svg--character" d="M1211,59.1v-27.7c0-3.7-1.8-5.8-5.1-5.8s-5.1,2.1-5.1,5.3v26.3c0,4.4,1.6,6.5,5.6,8.5l14.8,4.1c13.9,4.2,23.3,11.3,23.3,30.5v34.6c0,22-14.1,34.9-38.1,34.9s-37.6-10.9-37.6-30v-35.3h32.1v33.3c0,3.5,1.8,6.2,5.5,6.2s5.3-2.5,5.3-5.6v-32.3c0-4.8-2.5-7.4-6.9-9.2l-12.2-3.4c-17.1-3.9-24.5-13.2-24.5-32.3v-28.2c0-19.6,12.5-33,37.9-33s36.7,11.1,36.7,29.6v29.5h-31.7Z"/>
         </svg>
     </div>
-    <div className="laguna__bigTitle__line"></div>
-    <div className="laguna__bigTitle__line"></div>
-    <div className="laguna__bigTitle__line"></div>
+    <TitlesLines />
     </div>
 
  );

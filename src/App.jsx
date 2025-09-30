@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 //Components
 import Header from './components/Header'
-import CursorElement from './components/CursorElement'
 import Projects from './components/Projects'
 import TitleSelectedProjects from './components/titles/SelectedProjectsTitle'
 import HeroMyselfDesktop from './components/Index/HeroZone/HeroZoneMyself'
@@ -10,6 +9,11 @@ import HeroZoneMyInfo from './components/Index/HeroZone/HeroZoneMyInfo'
 import IndexFooter from './components/Index/IndexFooter'
 import OverlayDesign from './components/overlays/OverlayDesign'
 import OverlayIllustration from './components/overlays/OverlayIllustration'
+import OverlayHi from './components/overlays/OverlayHi'
+
+//Theme Elements
+import CursorElement from './components/th/CursorElement'
+import AmimatedBG from './components/th/AnimatedBG'
 
 
 
@@ -34,6 +38,7 @@ function App() {
   return (
     <>
       <CursorElement /> 
+      <AmimatedBG />
       
       <Header />
       <main className="laguna__main">
@@ -51,6 +56,7 @@ function App() {
         <IndexFooter />
         <OverlayDesign />
         <OverlayIllustration />
+        <OverlayHi />
       </main>
       <ScrollEffects />
       <ColorThemeToggle />
