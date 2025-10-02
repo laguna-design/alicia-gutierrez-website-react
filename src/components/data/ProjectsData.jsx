@@ -148,23 +148,10 @@
 		external: false,
 		hidden: false,
 		imagesH: [
-			'../../src/assets/img/projects/golem/H/laguna-golem-01.png',
-			'../../src/assets/img/projects/golem/H/laguna-golem-02.png',
-			'../../src/assets/img/projects/golem/H/laguna-golem-03.png',
-			'../../src/assets/img/projects/golem/H/laguna-golem-04.png',
-			'../../src/assets/img/projects/golem/H/laguna-golem-05.png',
-			'../../src/assets/img/projects/golem/H/laguna-golem-06.png',
-			'../../src/assets/img/projects/golem/H/laguna-golem-07.png',
-			'../../src/assets/img/projects/golem/H/laguna-golem-08.png'
+			'../../src/assets/img/projects/typomotion_Thumbnail.png'
 		],
 		imagesV: [
-			'../../src/assets/img/projects/golem/V/laguna-golem-01.png',
-			'../../src/assets/img/projects/golem/V/laguna-golem-02.png',
-			'../../src/assets/img/projects/golem/V/laguna-golem-03.png',
-			'../../src/assets/img/projects/golem/V/laguna-golem-04.png',
-			'../../src/assets/img/projects/golem/V/laguna-golem-05.png',
-			'../../src/assets/img/projects/golem/V/laguna-golem-06.png',
-			'../../src/assets/img/projects/golem/V/laguna-golem-07.png'
+			'../../src/assets/img/projects/typomotion_Thumbnail.png'
 		]
 	},
 	{
@@ -178,23 +165,28 @@
 		external: false,
 		hidden: false,
 		imagesH: [
-			'../../src/assets/img/projects/golem/H/laguna-golem-01.png',
-			'../../src/assets/img/projects/golem/H/laguna-golem-02.png',
-			'../../src/assets/img/projects/golem/H/laguna-golem-03.png',
-			'../../src/assets/img/projects/golem/H/laguna-golem-04.png',
-			'../../src/assets/img/projects/golem/H/laguna-golem-05.png',
-			'../../src/assets/img/projects/golem/H/laguna-golem-06.png',
-			'../../src/assets/img/projects/golem/H/laguna-golem-07.png',
-			'../../src/assets/img/projects/golem/H/laguna-golem-08.png'
+			'../../src/assets/img/projects/padilla/H/pad-01.png',
+			'../../src/assets/img/projects/padilla/H/pad-02.png',
+			'../../src/assets/img/projects/padilla/H/pad-03.png',
+			'../../src/assets/img/projects/padilla/H/pad-04.png',
+			'../../src/assets/img/projects/padilla/H/pad-05.png',
+			'../../src/assets/img/projects/padilla/H/pad-06.png',
+			'../../src/assets/img/projects/padilla/H/pad-07.png',
+			'../../src/assets/img/projects/padilla/H/pad-08.png',
+			'../../src/assets/img/projects/padilla/H/pad-09.png',
+			'../../src/assets/img/projects/padilla/H/pad-10.png'
 		],
 		imagesV: [
-			'../../src/assets/img/projects/golem/V/laguna-golem-01.png',
-			'../../src/assets/img/projects/golem/V/laguna-golem-02.png',
-			'../../src/assets/img/projects/golem/V/laguna-golem-03.png',
-			'../../src/assets/img/projects/golem/V/laguna-golem-04.png',
-			'../../src/assets/img/projects/golem/V/laguna-golem-05.png',
-			'../../src/assets/img/projects/golem/V/laguna-golem-06.png',
-			'../../src/assets/img/projects/golem/V/laguna-golem-07.png'
+			'../../src/assets/img/projects/padilla/V/pad-01.png',
+			'../../src/assets/img/projects/padilla/V/pad-02.png',
+			'../../src/assets/img/projects/padilla/V/pad-03.png',
+			'../../src/assets/img/projects/padilla/V/pad-04.png',
+			'../../src/assets/img/projects/padilla/V/pad-05.png',
+			'../../src/assets/img/projects/padilla/V/pad-06.png',
+			'../../src/assets/img/projects/padilla/V/pad-07.png',
+			'../../src/assets/img/projects/padilla/V/pad-08.png',
+			'../../src/assets/img/projects/padilla/V/pad-09.png',
+			'../../src/assets/img/projects/padilla/V/pad-10.png'
 		]
 	},
 	{
@@ -220,23 +212,40 @@
 		external: false,
 		hidden: false,
 		imagesH: [
-			'../../src/assets/img/projects/golem/H/laguna-golem-01.png',
-			'../../src/assets/img/projects/golem/H/laguna-golem-02.png',
-			'../../src/assets/img/projects/golem/H/laguna-golem-03.png',
-			'../../src/assets/img/projects/golem/H/laguna-golem-04.png',
-			'../../src/assets/img/projects/golem/H/laguna-golem-05.png',
-			'../../src/assets/img/projects/golem/H/laguna-golem-06.png',
-			'../../src/assets/img/projects/golem/H/laguna-golem-07.png',
-			'../../src/assets/img/projects/golem/H/laguna-golem-08.png'
+			'../../src/assets/img/projects/ra/H/RA-01.png',
+			'../../src/assets/img/projects/ra/H/RA-02.png',
+			'../../src/assets/img/projects/ra/H/RA-03.png',
+			'../../src/assets/img/projects/ra/H/RA-04.png',
+			'../../src/assets/img/projects/ra/H/RA-05.png',
+			'../../src/assets/img/projects/ra/H/RA-06.png',
+			'../../src/assets/img/projects/ra/H/RA-07.png',
+			'../../src/assets/img/projects/ra/H/RA-08.png',
+			'../../src/assets/img/projects/ra/H/RA-09.png',
+			'../../src/assets/img/projects/ra/H/RA-10.png',
+			'../../src/assets/img/projects/ra/H/RA-11.png',
+			'../../src/assets/img/projects/ra/H/RA-12.png',
+			'../../src/assets/img/projects/ra/H/RA-13.png',
+			'../../src/assets/img/projects/ra/H/RA-14.png',
+			'../../src/assets/img/projects/ra/H/RA-15.png',
+			'../../src/assets/img/projects/ra/H/RA-16.png'
 		],
 		imagesV: [
-			'../../src/assets/img/projects/golem/V/laguna-golem-01.png',
-			'../../src/assets/img/projects/golem/V/laguna-golem-02.png',
-			'../../src/assets/img/projects/golem/V/laguna-golem-03.png',
-			'../../src/assets/img/projects/golem/V/laguna-golem-04.png',
-			'../../src/assets/img/projects/golem/V/laguna-golem-05.png',
-			'../../src/assets/img/projects/golem/V/laguna-golem-06.png',
-			'../../src/assets/img/projects/golem/V/laguna-golem-07.png'
+			'../../src/assets/img/projects/ra/V/RA-01.png',
+			'../../src/assets/img/projects/ra/V/RA-02.png',
+			'../../src/assets/img/projects/ra/V/RA-03.png',
+			'../../src/assets/img/projects/ra/V/RA-04.png',
+			'../../src/assets/img/projects/ra/V/RA-05.png',
+			'../../src/assets/img/projects/ra/V/RA-06.png',
+			'../../src/assets/img/projects/ra/V/RA-07.png',
+			'../../src/assets/img/projects/ra/V/RA-08.png',
+			'../../src/assets/img/projects/ra/V/RA-09.png',
+			'../../src/assets/img/projects/ra/V/RA-10.png',
+			'../../src/assets/img/projects/ra/V/RA-11.png',
+			'../../src/assets/img/projects/ra/V/RA-12.png',
+			'../../src/assets/img/projects/ra/V/RA-13.png',
+			'../../src/assets/img/projects/ra/V/RA-14.png',
+			'../../src/assets/img/projects/ra/V/RA-15.png',
+			'../../src/assets/img/projects/ra/V/RA-16.png'
 		]
 
 	},
