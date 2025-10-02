@@ -23,10 +23,10 @@ const HeadMeta = () => (
     <Link rel="stylesheet" href="css/style.css" />
 
     {/* Favicons */}
-    <Link rel="icon" href="src/assets/th/favicon/laguna-favicon.ico" sizes="any" />
-    <Link rel="icon" href="src/assets/th/favicon/laguna-icon.svg" type="image/svg+xml" />
-    <Link rel="apple-touch-icon" href="src/assets/th/favicon/laguna-apple-touch-icon.png" />
-    <Link rel="manifest" href="src/assets/th/favicon/manifest.webmanifest" />
+    <Link rel="icon" href="../src/assets/th/favicon/laguna-favicon.ico" sizes="any" />
+    <Link rel="icon" href="../src/assets/th/favicon/laguna-icon.svg" type="image/svg+xml" />
+    <Link rel="apple-touch-icon" href="../src/assets/th/favicon/laguna-apple-touch-icon.png" />
+    <Link rel="manifest" href="../src/assets/th/favicon/manifest.webmanifest" />
 
     {/* Fonts */}
     <Link rel="preconnect" href="https://fonts.googleapis.com" />

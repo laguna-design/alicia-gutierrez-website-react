@@ -2,7 +2,7 @@
 /*Single pages*/
 body.laguna__singlepage{ 
     main.laguna__main{
-        padding: 0;
+        padding: 0 4rem;
         margin-bottom: 0;
         @include mixins.respond-to(overdesktop){
             padding: 0 4rem;
