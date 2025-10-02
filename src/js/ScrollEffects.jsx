@@ -1,68 +1,68 @@
+// ScrollEffects.jsx
 import { useEffect, useRef } from 'react';
 
-const ScrollEffects = () => {
-  const clipRef = useRef(null);
-  let scrollAmount = 0;
-  let isScrolling = false;
+const ScrollEffects = ({ children }) => {
+const clipRef = useRef(null);
+const scrollAmountRef = useRef(0);
+const isScrollingRef = useRef(false);
 
-  useEffect(() => {
-    const clipContent = clipRef.current;
-    if (!clipContent) return;
+useEffect(() => {
+	const clipContent = clipRef.current;
+	if (!clipContent) return;
 
-    const smoothScroll = () => {
-      isScrolling = true;
-      const step = () => {
-        const delta = scrollAmount * 0.2;
-        clipContent.scrollLeft += delta;
-        scrollAmount -= delta;
+	const smoothScroll = () => {
+	isScrollingRef.current = true;
+	const step = () => {
+		const delta = scrollAmountRef.current * 0.2;
+		clipContent.scrollLeft += delta;
+		scrollAmountRef.current -= delta;
 
-        if (Math.abs(scrollAmount) < 0.5) {
-          scrollAmount = 0;
-          isScrolling = false;
-          return;
-        }
+		if (Math.abs(scrollAmountRef.current) < 0.5) {
+		scrollAmountRef.current = 0;
+		isScrollingRef.current = false;
+		return;
+		}
 
-        requestAnimationFrame(step);
-      };
-      requestAnimationFrame(step);
-    };
+		requestAnimationFrame(step);
+	};
+	requestAnimationFrame(step);
+	};
 
-    const handleWheel = (e) => {
-      e.preventDefault();
-      scrollAmount += e.deltaY;
-      if (!isScrolling) smoothScroll();
-    };
+	const handleWheel = (e) => {
+	e.preventDefault();
+	scrollAmountRef.current += e.deltaY;
+	if (!isScrollingRef.current) smoothScroll();
+	};
 
-    const handleKeyDown = (e) => {
-      const arrowSpeed = 100;
-      if (e.key === 'ArrowRight') {
-        scrollAmount += arrowSpeed;
-        e.preventDefault();
-      } else if (e.key === 'ArrowLeft') {
-        scrollAmount -= arrowSpeed;
-        e.preventDefault();
-      }
+	const handleKeyDown = (e) => {
+	const arrowSpeed = 100;
+	if (e.key === 'ArrowRight') {
+		scrollAmountRef.current += arrowSpeed;
+		e.preventDefault();
+	} else if (e.key === 'ArrowLeft') {
+		scrollAmountRef.current -= arrowSpeed;
+		e.preventDefault();
+	}
 
-      if (!isScrolling && (e.key === 'ArrowRight' || e.key === 'ArrowLeft')) {
-        smoothScroll();
-      }
-    };
+	if (!isScrollingRef.current && (e.key === 'ArrowRight' || e.key === 'ArrowLeft')) {
+		smoothScroll();
+	}
+	};
 
-    clipContent.addEventListener('wheel', handleWheel, { passive: false });
-    window.addEventListener('keydown', handleKeyDown);
+	clipContent.addEventListener('wheel', handleWheel, { passive: false });
+	window.addEventListener('keydown', handleKeyDown);
 
-    // Cleanup
-    return () => {
-      clipContent.removeEventListener('wheel', handleWheel);
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, []);
+	return () => {
+	clipContent.removeEventListener('wheel', handleWheel);
+	window.removeEventListener('keydown', handleKeyDown);
+	};
+}, []);
 
-  return (
-    <div className="laguna__single__clip_content" ref={clipRef}>
-      {/* Your scrollable content goes here */}
-    </div>
-  );
+return (
+	<div className="laguna__single__clip_content laguna__single__desktop" ref={clipRef}>
+	{children}
+	</div>
+);
 };
 
 export default ScrollEffects;

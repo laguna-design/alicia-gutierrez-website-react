@@ -19,7 +19,8 @@ body.laguna__singlepage{
 
 .laguna__single__clip{
     @include mixins.respond-to(overdesktop){
-        overflow: hidden;
+          overflow-y: scroll;
+  white-space: nowrap;
         height: calc(96vh - 20px);
         width: calc(100vw - 110px);
     }
