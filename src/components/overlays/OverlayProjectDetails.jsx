@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import CloseBtn from '../buttons/Close';
 import projects from '../data/ProjectsData';
+//import React from 'react';
 import IconLink from '../icons/IconLink';
 
 const OverlayProjectDetails = () => {
@@ -27,34 +28,22 @@ return (
 
 			{project.prototypes && (
 				<div className="laguna__projects__single__details__prototypes">
-				<h6>Figma prototypes</h6>
-				<div className="laguna__projects__single__details__prototypes_links">
-					{project.prototypes.map((proto, i) => (
-					<dl key={i}>
-						<dt>{proto.title}</dt>
-						<dd>
-						<a
-							className="lagunahover-container"
-							href={proto.desktop}
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							Desktop {<IconLink />}
-						</a>
-						</dd>
-						<dd>
-						<a
-							className="lagunahover-container"
-							href={proto.mobile}
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							Mobile {<IconLink />}
-						</a>
-						</dd>
-					</dl>
-					))}
-				</div>
+					<h6>Figma prototypes</h6>
+					<div className="laguna__projects__single__details__prototypes_links">
+						{project.prototypes.map((group, i) => (
+							<dl key={i}>
+								{group.group && <dt>{group.group}</dt>}
+								
+								{group.items.map((item, j) => (
+									<dd key={j}>
+										<a href={item.url} className='lagunahover-container' target="_blank" rel="noopener noreferrer">
+											{item.label} <IconLink />
+										</a>
+									</dd>
+								))}
+							</dl>
+						))}
+					</div>
 				</div>
 			)}
 			</div>

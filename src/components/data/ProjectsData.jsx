@@ -32,14 +32,18 @@
 		],
 		prototypes: [
 			{
-			title: 'Website',
-			desktop: 'https://www.figma.com/proto/7msW0ZB4Zbv01NJ109XdtN/_Alicia-Guti%C3%A9rrez---Mr-Marcel---Propuesta?page-id=30%3A288&node-id=80-1215&viewport=419%2C313%2C0.07&t=DTOjsV0s8A0WwYuy-8&scaling=scale-down&content-scaling=fixed&starting-point-node-id=80%3A1038&hide-ui=1',
-			mobile: 'https://www.figma.com/proto/7msW0ZB4Zbv01NJ109XdtN/_Alicia-Guti%C3%A9rrez---Mr-Marcel---Propuesta?page-id=80%3A1431&node-id=80-1681&viewport=1713%2C238%2C0.1&t=AMbpdH8dqyoZugyE-8&scaling=scale-down&content-scaling=fixed&starting-point-node-id=80%3A1601&hide-ui=1'
+			group: 'Website',
+			items: [
+					{ label: 'Desktop', url: 'https://www.figma.com/proto/...desktop' },
+					{ label: 'Mobile', url: 'https://www.figma.com/proto/...mobile' }
+				]
 			},
 			{
-			title: 'Apps',
-			desktop: 'https://www.figma.com/proto/7msW0ZB4Zbv01NJ109XdtN/_Alicia-Guti%C3%A9rrez---Mr-Marcel---Propuesta?page-id=145%3A166&node-id=145-668&viewport=535%2C303%2C0.21&t=RW0i2HTxgsnx5321-8&scaling=scale-down&content-scaling=fixed&starting-point-node-id=145%3A167&hide-ui=1',
-			mobile: 'https://www.figma.com/proto/7msW0ZB4Zbv01NJ109XdtN/_Alicia-Guti%C3%A9rrez---Mr-Marcel---Propuesta?page-id=165%3A1091&node-id=165-1092&viewport=755%2C249%2C0.31&t=sEOng6vFC5gO5sDb-8&scaling=scale-down&content-scaling=fixed&starting-point-node-id=165%3A1092&hide-ui=1'
+				group: 'Apps',
+				items: [
+					{ label: 'Golem Twoo', url: 'https://www.figma.com/proto/...golem' },
+					{ label: 'Tickets', url: 'https://www.figma.com/proto/...tickets' }
+				]
 			}
 		]
 	},
@@ -78,16 +82,13 @@
 		],
 		prototypes: [
 			{
-			title: 'Eu Sou',
-			desktop: 'https://www.figma.com/proto/...1363',
-			mobile: 'https://www.figma.com/proto/...1966'
-			},
-			{
-			title: 'Vantagens',
-			desktop: 'https://www.figma.com/proto/...2577',
-			mobile: 'https://www.figma.com/proto/...3394'
+				group: null,
+				items: [
+				{ label: 'Desktop', url: 'https://www.figma.com/proto/...desktop' },
+				{ label: 'Mobile', url: 'https://www.figma.com/proto/...mobile' }
+				]
 			}
-		]		
+		]	
 	},
 	{
 		name: 'Endesa Portugal',
@@ -126,17 +127,20 @@
 		],
 		prototypes: [
 			{
-			title: 'Eu Sou',
-			desktop: 'https://www.figma.com/proto/...1363',
-			mobile: 'https://www.figma.com/proto/...1966'
+			group: 'Eu Sou',
+			items: [
+				{ label: 'Desktop', url: 'https://www.figma.com/proto/...1363' },
+				{ label: 'Mobile', url: 'https://www.figma.com/proto/...1966' }
+				]
 			},
 			{
-			title: 'Vantagens',
-			desktop: 'https://www.figma.com/proto/...2577',
-			mobile: 'https://www.figma.com/proto/...3394'
+			group: 'Vantagens',
+				items: [
+				{ label: 'Desktop', url: 'https://www.figma.com/proto/...2577' },
+				{ label: 'Mobile', url: 'https://www.figma.com/proto/...3394' }
+				]
 			}
 		]
-
 	},
 	{
 		name: 'Dékuple',
@@ -330,8 +334,7 @@
 			desktop: 'https://www.figma.com/proto/...2577',
 			mobile: 'https://www.figma.com/proto/...3394'
 			}
-		]		
-
+		]
 	},
 	{
 		name: 'El otro lado',
