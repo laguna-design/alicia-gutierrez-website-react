@@ -175,19 +175,7 @@
 			'../../src/assets/img/projects/dekuple/V/DEK-10.png',
 			'../../src/assets/img/projects/dekuple/V/DEK-11.png',
 			'../../src/assets/img/projects/dekuple/V/DEK-12.png',
-		],
-		prototypes: [
-			{
-			title: 'Eu Sou',
-			desktop: 'https://www.figma.com/proto/...1363',
-			mobile: 'https://www.figma.com/proto/...1966'
-			},
-			{
-			title: 'Vantagens',
-			desktop: 'https://www.figma.com/proto/...2577',
-			mobile: 'https://www.figma.com/proto/...3394'
-			}
-		]		
+		]
 	},
 	{
 		name: 'TypoMotion Explorations',
@@ -204,19 +192,7 @@
 		],
 		imagesV: [
 			'../../src/assets/img/projects/typomotion_Thumbnail.png'
-		],
-		prototypes: [
-			{
-			title: 'Eu Sou',
-			desktop: 'https://www.figma.com/proto/...1363',
-			mobile: 'https://www.figma.com/proto/...1966'
-			},
-			{
-			title: 'Vantagens',
-			desktop: 'https://www.figma.com/proto/...2577',
-			mobile: 'https://www.figma.com/proto/...3394'
-			}
-		]		
+		]	
 	},
 	{
 		name: 'Padilla (Fish Take Away)',
@@ -251,19 +227,7 @@
 			'../../src/assets/img/projects/padilla/V/pad-08.png',
 			'../../src/assets/img/projects/padilla/V/pad-09.png',
 			'../../src/assets/img/projects/padilla/V/pad-10.png'
-		],
-		prototypes: [
-			{
-			title: 'Eu Sou',
-			desktop: 'https://www.figma.com/proto/...1363',
-			mobile: 'https://www.figma.com/proto/...1966'
-			},
-			{
-			title: 'Vantagens',
-			desktop: 'https://www.figma.com/proto/...2577',
-			mobile: 'https://www.figma.com/proto/...3394'
-			}
-		]		
+		]	
 	},
 	{
 		name: 'Siren',
@@ -322,19 +286,8 @@
 			'../../src/assets/img/projects/ra/V/RA-14.png',
 			'../../src/assets/img/projects/ra/V/RA-15.png',
 			'../../src/assets/img/projects/ra/V/RA-16.png'
-		],
-		prototypes: [
-			{
-			title: 'Eu Sou',
-			desktop: 'https://www.figma.com/proto/...1363',
-			mobile: 'https://www.figma.com/proto/...1966'
-			},
-			{
-			title: 'Vantagens',
-			desktop: 'https://www.figma.com/proto/...2577',
-			mobile: 'https://www.figma.com/proto/...3394'
-			}
 		]
+		
 	},
 	{
 		name: 'El otro lado',

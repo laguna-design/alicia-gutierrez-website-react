@@ -2,6 +2,8 @@ import { useParams } from 'react-router-dom';
 import projects from '../components/data/ProjectsData';
 import ScrollEffects from '../js/ScrollEffects';
 import OverlayProjectDetails from '../components/overlays/OverlayProjectDetails';
+import ProjectNav from '../components/projects/ProjectsNav';
+
 
 
 const ProjectPage = () => {
@@ -49,6 +51,8 @@ return (
 		</div>
 		</section>
 		<OverlayProjectDetails project={project} />
+		<ProjectNav slug={slug} />
+
 	</>
 	
 );
