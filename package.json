@@ -5,6 +5,7 @@
   "description": "Alicia Gutierrez Portfolio built with React and Vite",
   "type": "module",
   "main": "index.js",
+  "homepage": "http://alicia-gutierrez.com/portfolio-sandbox",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
