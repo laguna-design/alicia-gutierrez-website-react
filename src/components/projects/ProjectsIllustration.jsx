@@ -13,7 +13,7 @@
 	return (
 		<ul className="laguna__Projects__list" id="laguna__Projects__list">
 		{illustrationProjects.map((project, index) => {
-			const isHidden = project.hidden;
+			//const isHidden = project.hidden;
 			return (
 			<li
 				key={index}
