@@ -204,6 +204,7 @@ body.laguna__singlepage{
     padding:8px 16px;
     border-radius: 20rem;
     overflow: hidden;
+    text-decoration: none;
     @include mixins.basicTransition;
     @include mixins.respond-to(overdesktop){
         

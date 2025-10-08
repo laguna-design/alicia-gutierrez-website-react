@@ -1,0 +1,20 @@
+{
+  "name": "Laguna Portfolio",
+  "short_name": "Laguna",
+  "start_url": "/portfolio-sandbox/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/th/favicon/laguna-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/th/favicon/laguna-favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}
