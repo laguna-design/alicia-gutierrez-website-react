@@ -24,7 +24,7 @@ return (
 		<div className="laguna--hi">
 			<article className="laguna--hi__img">
 			<img
-				src="../../src/assets/img/ali.gif"
+				src="../img/ali.gif"
 				alt="Alicia"
 				style={{ maxWidth: '100%' }}
 			/>
