@@ -1,7 +1,7 @@
 {
   "name": "Laguna Portfolio",
   "short_name": "Laguna",
-  "start_url": "/portfolio-sandbox/",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
