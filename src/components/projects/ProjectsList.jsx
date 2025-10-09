@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ShowAll from '../buttons/ShowAll';
 import projects from '../data/ProjectsData';
-
+import IconExternal from '../icons/IconExternal'; // ← Make sure this is imported
 
 const SelectedProjects = () => {
 	const [showAll, setShowAll] = useState(false);
@@ -13,11 +13,13 @@ const SelectedProjects = () => {
 			<ul className="laguna__Projects__list" id="laguna__Projects__list">
 				{projects.map((project, index) => {
 					const isHidden = project.hidden && !showAll;
+					const externalClass = project.external ? 'laguna__Projects__external_link' : '';
+
 					return (
 						<li
 							key={index}
-							className={`laguna__Projects__single lagunahover-container ${
-							project.hidden ? 'laguna__projects__single--hidden' : ''
+							className={`laguna__Projects__single lagunahover-container ${externalClass} ${
+								project.hidden ? 'laguna__projects__single--hidden' : ''
 							}`}
 							data-img={project.img}
 							section={project.section}
@@ -30,7 +32,10 @@ const SelectedProjects = () => {
 									rel="noopener noreferrer"
 									className="lagunahover-container"
 								>
-									<h3>{project.name}</h3>
+									<h3>
+										{project.name}
+										<IconExternal />
+									</h3>
 									<div className="laguna__Projects__single__details">
 										<img
 											className="laguna__projects__thumbnnail__mobile"
@@ -70,7 +75,6 @@ const SelectedProjects = () => {
 									</div>
 								</Link>
 							)}
-
 						</li>
 					);
 				})}
@@ -81,5 +85,3 @@ const SelectedProjects = () => {
 };
 
 export default SelectedProjects;
-
-

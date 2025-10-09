@@ -1,5 +1,5 @@
-	
 import { Link } from 'react-router-dom';
+import IconExternal from '../icons/IconExternal';
 
 	import projects from '../data/ProjectsData';
 
@@ -18,62 +18,62 @@ import { Link } from 'react-router-dom';
 
 	return (
 		<li
-		key={index}
-		className={`laguna__Projects__single lagunahover-container ${
-			project.hidden ? 'laguna__projects__single--hidden' : ''
-		}`}
-		data-img={project.img}
-		section={project.section}
-		style={{ display: isHidden ? 'none' : 'list-item' }}
-		>
-		{project.external ? (
-			<a
-			href={project.href}
-			target="_blank"
-			rel="noopener noreferrer"
-			className="lagunahover-container"
+			key={index}
+			className={`laguna__Projects__single lagunahover-container${project.external ? ' laguna__Projects__external_link' : ''}`}
+			data-img={project.img}
+			section={project.section}
 			>
-			<h3>{project.name}</h3>
-			<div className="laguna__Projects__single__details">
-				<img
-				className="laguna__projects__thumbnnail__mobile"
-				src={project.img}
-				alt={project.name}
-				/>
-				<div className="laguna__Projects__single__details__text">
-				<span className="laguna__Projects__single__details__client">
-					{project.client}
-				</span>
-				<span className="laguna__Projects__single__details__category">
-					{project.category}
-				</span>
-				</div>
-			</div>
-			</a>
-		) : (
-			<Link
-			to={`/project/${project.slug}`}
-			className="lagunahover-container"
-			>
-			<h3>{project.name}</h3>
-			<div className="laguna__Projects__single__details">
-				<img
-				className="laguna__projects__thumbnnail__mobile"
-				src={project.img}
-				alt={project.name}
-				/>
-				<div className="laguna__Projects__single__details__text">
-				<span className="laguna__Projects__single__details__client">
-					{project.client}
-				</span>
-				<span className="laguna__Projects__single__details__category">
-					{project.category}
-				</span>
-				</div>
-			</div>
-			</Link>
-		)}
-		</li>
+				{project.external ? (
+				<a
+					href={project.href}
+					target="_blank"
+					rel="noopener noreferrer"
+					className="lagunahover-container"
+				>
+					<h3>
+					{project.name}
+					<IconExternal />
+					</h3>
+					<div className="laguna__Projects__single__details">
+					<img
+						className="laguna__projects__thumbnnail__mobile"
+						src={project.img}
+						alt={project.name}
+					/>
+					<div className="laguna__Projects__single__details__text">
+						<span className="laguna__Projects__single__details__client">
+						{project.client}
+						</span>
+						<span className="laguna__Projects__single__details__category">
+						{project.category}
+						</span>
+					</div>
+					</div>
+				</a>
+				) : (
+				<Link
+					to={`/project/${project.slug}`}
+					className="lagunahover-container"
+				>
+					<h3>{project.name}</h3>
+					<div className="laguna__Projects__single__details">
+					<img
+						className="laguna__projects__thumbnnail__mobile"
+						src={project.img}
+						alt={project.name}
+					/>
+					<div className="laguna__Projects__single__details__text">
+						<span className="laguna__Projects__single__details__client">
+						{project.client}
+						</span>
+						<span className="laguna__Projects__single__details__category">
+						{project.category}
+						</span>
+					</div>
+					</div>
+				</Link>
+				)}
+				</li>
 	);
 	})}
 	</ul>

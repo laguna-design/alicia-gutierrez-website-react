@@ -72,12 +72,13 @@
             flex-direction: row;
             gap:2rem;
             svg{
-                width: 3rem;
+                width: 5rem;
                 .laguna--external-link {
-                    fill: none;
                     stroke: vars.$laguna-white;
                     stroke-miterlimit: 10;
-                    stroke-width: 4.3px;
+                    stroke-width: 0;
+					stroke: vars.$laguna-white;
+                    fill: vars.$laguna-white;
                     
                 }
             }
@@ -86,7 +87,8 @@
             h3{
                 svg{
                     .laguna--external-link {
-                        stroke:var(--laguna--theme-color);
+                        stroke: var(--laguna--theme-color);
+                        fill: var(--laguna--theme-color);
                     }
                 }
             }
