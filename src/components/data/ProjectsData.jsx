@@ -7,7 +7,7 @@ const transformPaths = (arr) => arr.map((path) => withBase(path));
 		name: 'Cines Golem',
 		slug: 'cines-golem',
 		href: 'single-pages/laguna-golem.html',
-		img: withBase('img/projects/golem-thumbnail.png'),
+		img: transformPaths(['img/projects/golem-thumbnail.png']),
 		client: 'Personal Project',
 		category: 'Ui / Branding',
 		section: 'Design',
@@ -195,11 +195,7 @@ const transformPaths = (arr) => arr.map((path) => withBase(path));
 		imagesV: transformPaths([
 			'img/projects/typomotion_Thumbnail.png'
 		])
-<<<<<<< HEAD
 	},*/
-=======
-	},
->>>>>>> Fixing-errors
 	{
 		name: 'Padilla (Fish Take Away)',
 		slug: 'padilla',
@@ -239,11 +235,7 @@ const transformPaths = (arr) => arr.map((path) => withBase(path));
 		name: 'Siren',
 		slug: '',
 		href: 'https://www.instagram.com/laguna_illustrator/p/C0luA9Ptz2b/?img_index=1',
-<<<<<<< HEAD
 		img: transformPaths(['img/projects/siren-thumbnail.jpg']),
-=======
-		img: transformPaths[('img/projects/siren-thumbnail.jpg')],
->>>>>>> Fixing-errors
 		client: 'Personal Project',
 		category: 'Illustration',
 		section: 'Illustration',
@@ -255,11 +247,7 @@ const transformPaths = (arr) => arr.map((path) => withBase(path));
 		name: 'Recircle Awards',
 		slug: 'recircle-awards',
 		href: 'single-pages/laguna-recircle-awards.html',
-<<<<<<< HEAD
 		img: transformPaths(['img/projects/ra-thumbnail.png']),
-=======
-		img: 'img/projects/ra-thumbnail.png',
->>>>>>> Fixing-errors
 		client: 'Valebridge',
 		category: 'UI / Ux / Branding',
 		section: 'Design',
@@ -307,11 +295,7 @@ const transformPaths = (arr) => arr.map((path) => withBase(path));
 		name: 'El otro lado',
 		slug: '',
 		href: 'https://www.instagram.com/laguna_illustrator/p/C12DO4LNKSs/?img_index=1',
-<<<<<<< HEAD
 		img: transformPaths(['img/projects/el-otro-lado-thumbnail.jpg']),
-=======
-		img: transformPaths[('img/projects/el-otro-lado-thumbnail.jpg')],
->>>>>>> Fixing-errors
 		client: 'Personal Project',
 		category: 'Illustration',
 		section: 'Illustration',
@@ -322,11 +306,7 @@ const transformPaths = (arr) => arr.map((path) => withBase(path));
 		name: 'LotR fantart / Gollum',
 		slug: '',
 		href: 'https://www.instagram.com/laguna_illustrator/p/C7r9U-NsII5/?img_index=1',
-<<<<<<< HEAD
 		img: transformPaths(['img/projects/lotR-thumbnail.jpg']),
-=======
-		img: transformPaths[('img/projects/lotR-thumbnail.jpg')],
->>>>>>> Fixing-errors
 		client: 'Personal Project',
 		category: 'Illustration',
 		section: 'Illustration',
@@ -337,11 +317,7 @@ const transformPaths = (arr) => arr.map((path) => withBase(path));
 		name: 'LotR fantart / Eowyn',
 		slug: '',
 		href: 'https://www.instagram.com/laguna_illustrator/p/C5WlOw0LgmD/?img_index=1',
-<<<<<<< HEAD
 		img: transformPaths(['img/projects/lotR-eowyn-thumbnail.jpg']),
-=======
-		img: transformPaths[('img/projects/lotR-eowyn-thumbnail.jpg')],
->>>>>>> Fixing-errors
 		client: 'Personal Project',
 		category: 'Illustration',
 		section: 'Illustration',
@@ -352,11 +328,7 @@ const transformPaths = (arr) => arr.map((path) => withBase(path));
 		name: 'Abubilla',
 		slug: '',
 		href: 'https://www.instagram.com/laguna_illustrator/p/Cm3wzC2rATY/',
-<<<<<<< HEAD
 		img: transformPaths(['img/projects/abubilla-thumbnail.png']),
-=======
-		img: transformPaths[('img/projects/abubilla-thumbnail.png')],
->>>>>>> Fixing-errors
 		client: 'Personal Project',
 		category: 'Illustration',
 		section: 'Illustration',

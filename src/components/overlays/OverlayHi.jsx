@@ -1,6 +1,10 @@
 import CloseBtn from '../buttons/Close'
 import TitlesLines from '../th/TitlesLines'
 
+import { withBase } from '../../utils/paths';
+const transformPaths = (arr) => arr.map((path) => withBase(path));
+const transformSinglePath = (path) => transformPaths([path])[0];
+
 const OverlayHi = () => {
 return (
 	<div
@@ -24,7 +28,8 @@ return (
 		<div className="laguna--hi">
 			<article className="laguna--hi__img">
 			<img
-				src="../img/ali.gif"
+				src={transformSinglePath('img/ali.gif')}
+				
 				alt="Alicia"
 				style={{ maxWidth: '100%' }}
 			/>
