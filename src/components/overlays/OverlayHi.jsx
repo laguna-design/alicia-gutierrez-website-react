@@ -19,7 +19,7 @@ return (
 		<section className="laguna__Projects">
 		<div className="laguna__lines_ver">
 			<div className="laguna__bigTitle">
-			<h3>Hi! I´m Alicia</h3>
+			<h3>Hi!</h3>
 			<CloseBtn overlay="hi" />
 			</div>
 			<TitlesLines />
@@ -50,7 +50,7 @@ return (
 				Proficient in tools like Figma, Adobe Creative Suite, and Jira. I integrate well with agile and multidisciplinary teams.
 			</p>
 
-			<h6>Contact me</h6>
+			<h4>Contact me</h4>
 
 			<ul className="laguna--hi__contact">
 				<li>
@@ -75,6 +75,18 @@ return (
 				</a>
 				</li>
 				<li>/</li>
+				<li>
+				<a
+					className="lagunahover-container"
+					href="https://github.com/laguna-design"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					Github
+				</a>
+				</li>
+			</ul>
+			<ul className="laguna--hi__contact">
 				<li>
 				<a
 					className="lagunahover-container"
