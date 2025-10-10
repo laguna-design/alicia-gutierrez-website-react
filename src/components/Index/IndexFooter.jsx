@@ -1,3 +1,4 @@
+import { closeOverlay } from '../../js/OverlayManager';
 const IndexFooter = () => {
   return (
     

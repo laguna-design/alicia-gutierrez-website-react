@@ -1,10 +1,17 @@
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const OverlayManager = () => {
+  const location = useLocation();
+
   useEffect(() => {
     const triggerButtons = document.querySelectorAll('.laguna__trigger_btn');
     const closeButtons = document.querySelectorAll('.laguna__close_btn');
     const overlays = document.querySelectorAll('.laguna__overlay_BG');
+
+    const triggerHandlers = [];
+    const closeHandlers = [];
+    const overlayHandlers = [];
 
     triggerButtons.forEach((button) => {
       const handleClick = () => {
@@ -18,9 +25,7 @@ const OverlayManager = () => {
         }
       };
       button.addEventListener('click', handleClick);
-
-      // Cleanup
-      return () => button.removeEventListener('click', handleClick);
+      triggerHandlers.push(() => button.removeEventListener('click', handleClick));
     });
 
     closeButtons.forEach((button) => {
@@ -35,9 +40,7 @@ const OverlayManager = () => {
         }
       };
       button.addEventListener('click', handleClick);
-
-      // Cleanup
-      return () => button.removeEventListener('click', handleClick);
+      closeHandlers.push(() => button.removeEventListener('click', handleClick));
     });
 
     overlays.forEach((overlay) => {
@@ -54,13 +57,28 @@ const OverlayManager = () => {
         }
       };
       overlay.addEventListener('click', handleClick);
-
-      // Cleanup
-      return () => overlay.removeEventListener('click', handleClick);
+      overlayHandlers.push(() => overlay.removeEventListener('click', handleClick));
     });
-  }, []);
+
+    return () => {
+      triggerHandlers.forEach((unbind) => unbind());
+      closeHandlers.forEach((unbind) => unbind());
+      overlayHandlers.forEach((unbind) => unbind());
+    };
+  }, [location.pathname]); // Re-run on route change
 
   return null;
 };
+
+export function closeOverlay(overlayType) {
+  const targetOverlay = document.querySelector(`.laguna__overlay_BG[data-overlay="${overlayType}"]`);
+  if (targetOverlay) {
+    targetOverlay.classList.remove('show');
+    setTimeout(() => {
+      targetOverlay.classList.remove('show');
+    }, 500);
+  }
+  document.body.classList.remove('overlay-open');
+}
 
 export default OverlayManager;

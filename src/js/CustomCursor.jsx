@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const CustomCursor = () => {
+  const location = useLocation();
+
   useEffect(() => {
     const isTouchDevice = () =>
       'ontouchstart' in window ||
@@ -8,8 +11,7 @@ const CustomCursor = () => {
       navigator.msMaxTouchPoints > 0;
 
     const customCursor = document.querySelector('.lagunacustom-cursor');
-
-    if (!customCursor) return; // Exit if cursor element doesn't exist
+    if (!customCursor) return;
 
     if (!isTouchDevice()) {
       const hoverContainers = document.querySelectorAll('.lagunahover-container');
@@ -29,11 +31,7 @@ const CustomCursor = () => {
           }
         });
 
-        if (isHovering) {
-          customCursor.classList.add('zoom');
-        } else {
-          customCursor.classList.remove('zoom');
-        }
+        customCursor.classList.toggle('zoom', isHovering);
       };
 
       window.addEventListener('mousemove', handleMouseMove);
@@ -44,7 +42,7 @@ const CustomCursor = () => {
     } else {
       customCursor.style.display = 'none';
     }
-  }, []);
+  }, [location.pathname]); // Re-run on route change
 
   return null;
 };

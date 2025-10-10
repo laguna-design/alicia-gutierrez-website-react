@@ -1,5 +1,9 @@
+
+import { closeOverlay } from '../../../js/OverlayManager'
+
 const HeroNavAndMoon = () => {
   return (
+	
     <section className="laguna__heroZone__nav-and-moon">
       {
         <>
@@ -53,7 +57,9 @@ const HeroNavAndMoon = () => {
           </div>
         </>
       }
+	  
     </section>
+	
   );
 };
 

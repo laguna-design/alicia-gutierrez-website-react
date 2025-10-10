@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ShowAll from '../buttons/ShowAll';
 import projects from '../data/ProjectsData';
-import IconExternal from '../icons/IconExternal'; // ← Make sure this is imported
+import IconExternal from '../icons/IconExternal';
 
 const SelectedProjects = () => {
 	const [showAll, setShowAll] = useState(false);

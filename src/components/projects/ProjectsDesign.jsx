@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import IconExternal from '../icons/IconExternal';
+import { closeOverlay } from '../../js/OverlayManager';
+
 
 	import projects from '../data/ProjectsData';
 
@@ -51,11 +53,14 @@ import IconExternal from '../icons/IconExternal';
 					</div>
 				</a>
 				) : (
+				
 				<Link
 					to={`/project/${project.slug}`}
 					className="lagunahover-container"
-				>
+					onClick={() => closeOverlay('design')}
+					>
 					<h3>{project.name}</h3>
+					
 					<div className="laguna__Projects__single__details">
 					<img
 						className="laguna__projects__thumbnnail__mobile"
