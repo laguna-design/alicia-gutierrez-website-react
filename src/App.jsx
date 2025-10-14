@@ -70,39 +70,41 @@
 	return (
 		<>
 		<HeadMeta />
-		<CursorElement />
-		<AmimatedBG />
-		<Header />
+		<main class="laguna__main">
+			<CursorElement />
+			<AmimatedBG />
+			<Header />
 
-		<Routes>
-			<Route path="/" element={<HomePage />} />
-			<Route path="/project/:slug" element={<ProjectPage />} />
-		</Routes>
+			<Routes>
+				<Route path="/" element={<HomePage />} />
+				<Route path="/project/:slug" element={<ProjectPage />} />
+			</Routes>
 
-		{isHome && (
-			<>
-			<section className="laguna__heroZone">
-				<div className="laguna__heroZone-main">
-				<HeroMyselfDesktop />
-				<HeroNavAndMoon />
-				<HeroZoneMyInfo />
-				</div>
-			</section>
+			{isHome && (
+				<>
+				<section className="laguna__heroZone">
+					<div className="laguna__heroZone-main">
+					<HeroMyselfDesktop />
+					<HeroNavAndMoon />
+					</div>
+					<HeroZoneMyInfo />
+				</section>
 
-			<section id="laguna_work" className="laguna__selectedProjects">
-				<TitleSelectedProjects />
-				<ProjectsList />
-			</section>
+				<section id="laguna_work" className="laguna__selectedProjects">
+					<TitleSelectedProjects />
+					<ProjectsList />
+				</section>
 
-			<IndexFooter />
-			</>
-		)}
+				<IndexFooter />
+				</>
+			)}
 
-		{/* Overlays */}
-		<OverlayHi />
-		<OverlayDesign />
-		<OverlayIllustration />
-		<OverlayProjectDetails />
+			{/* Overlays */}
+			<OverlayHi />
+			<OverlayDesign />
+			<OverlayIllustration />
+			<OverlayProjectDetails />
+		</main>
 
 		{/* JS Enhancements */}
 		<ScrollEffects />
