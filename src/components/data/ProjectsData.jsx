@@ -179,7 +179,7 @@ const transformPaths = (arr) => arr.map((path) => withBase(path));
 			'img/projects/dekuple/V/DEK-12.png',
 		])
 	},
-	/*{
+	{
 		name: 'TypoMotion Explorations',
 		slug: 'typomotion-explorations',
 		href: 'single-pages/laguna-typomotion-explorations.html',
@@ -190,12 +190,19 @@ const transformPaths = (arr) => arr.map((path) => withBase(path));
 		external: false,
 		hidden: false,
 		imagesH: transformPaths([
-			'img/projects/typomotion_Thumbnail.png'
+			'img/videos/dontpanic-render_1_1.mp4',
+			'img/videos/start-over-render.mp4',
+			'img/videos/DISPLACEMENT_1.mp4',
+			'img/videos/Liquid mind_2_1.mp4',
 		]),
 		imagesV: transformPaths([
-			'img/projects/typomotion_Thumbnail.png'
+			'img/videos/dontpanic-render_1_1.mp4',
+			'img/videos/start-over-render.mp4',
+			'img/videos/DISPLACEMENT_1.mp4',
+			'img/videos/Liquid mind_2_1.mp4',
+
 		])
-	},*/
+	},
 	{
 		name: 'Padilla (Fish Take Away)',
 		slug: 'padilla',
