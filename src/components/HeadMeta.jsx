@@ -21,11 +21,6 @@ const HeadMeta = () => (
 	<Meta property="og:site_name" content="Alicia Gutiérrez" />
 	<Meta property="og:locale" content="en" />
 
-	
-
-	{/* Stylesheet */}
-	<Link rel="stylesheet" href="css/style.css" />
-
 	{/* Favicons */}
 	<Link rel="icon" href={transformSinglePath('th/favicon/laguna-favicon.ico')} sizes="any" />
 	<Link rel="icon" href={transformSinglePath('th/favicon/laguna-icon.svg')} type="image/svg+xml" />
