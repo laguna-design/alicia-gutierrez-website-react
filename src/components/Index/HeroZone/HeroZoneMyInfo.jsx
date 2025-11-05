@@ -32,13 +32,13 @@ const HeroZoneMyInfo = () => {
                 <div className="laguna__my--info__col laguna__my--info__module">
                     <h6>Services</h6>
                     <dl>
-                        <dt>Creative UI Design</dt>
-                        <dt>UX Design</dt>
-                        <dt>Design System</dt>
-                        <dt>Art Direction</dt>
-                        <dt>Brand Design</dt>
-                        <dt>Motion Graphics</dt>
-                        <dt>Front-end Dev</dt>
+                        <dt>+ UI Design</dt>
+                        <dt>+ Front-end Dev</dt>
+                        <dt>+ Design System</dt>
+                        <dt>+ DesignOps</dt>
+                        <dt>+ Motion Graphics</dt>
+                        <dt>+ UX Design</dt>
+                        <dt>+ Brand Design</dt>
                     </dl>
                 </div>
 
